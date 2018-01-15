@@ -1,28 +1,48 @@
 .index__header {
-  height: 80px;
-  text-align: center;
-  padding: 20px;
+  height: 45px;
+  line-height: 45px;
+  padding: 15px;
+  padding-bottom: 0;
   @include clearfix;
+
+  &__hamburger {
+    width: 18px;
+    height: 13px;
+    float: left;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/hamburger_menu_mobile.png);
+    }
+  }
 
   &__logo {
     display: block;
-    width: 115px;
-    height: 100%;
-    text-indent: -9999px;
-    background-image: url(../images/logo.png);
-    float: left;
+    width: 76px;
+    height: 19px;
+    margin: 0 auto;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-indent: -9999px;
+      background-image: url(../images/logo_mobile.png);
+    }
   }
 
-  &__nav {
-    display: inline-block;
-  }
-
-  &__nav ul {
-    @include clearfix;
-  }
-
-  &__nav ul li {
-    float: left;
-    padding: 0 15px;
-  }
+  // &__nav {
+  //   display: inline-block;
+  // }
+  //
+  // &__nav ul {
+  //   @include clearfix;
+  // }
+  //
+  // &__nav ul li {
+  //   float: left;
+  //   padding: 0 15px;
+  // }
 }

@@ -14,26 +14,31 @@ a:hover {
   margin: 0 auto; }
 
 .index__header {
-  height: 80px;
-  text-align: center;
-  padding: 20px; }
+  height: 45px;
+  line-height: 45px;
+  padding: 15px;
+  padding-bottom: 0; }
   .index__header:after {
     content: "";
     display: table;
     clear: both; }
+  .index__header__hamburger {
+    width: 18px;
+    height: 13px;
+    float: left; }
+    .index__header__hamburger a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/hamburger_menu_mobile.png); }
   .index__header__logo {
     display: block;
-    width: 115px;
-    height: 100%;
-    text-indent: -9999px;
-    background-image: url(../images/logo.png);
-    float: left; }
-  .index__header__nav {
-    display: inline-block; }
-  .index__header__nav ul:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .index__header__nav ul li {
-    float: left;
-    padding: 0 15px; }
+    width: 76px;
+    height: 19px;
+    margin: 0 auto; }
+    .index__header__logo a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-indent: -9999px;
+      background-image: url(../images/logo_mobile.png); }
