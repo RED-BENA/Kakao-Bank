@@ -16,9 +16,17 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  vertical-align: bottom;
+}
+
 .wrapper {
-  max-width: 1165px;
+  max-width: 320px;
   margin: 0 auto;
+
+  @include tablet {
+    max-width: 1165px;
+  }
 }
 
 @mixin clearfix {

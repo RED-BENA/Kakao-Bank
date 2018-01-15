@@ -1,0 +1,25 @@
+.reasonable-saving {
+  &__title {
+    @include section__title;
+  }
+
+  &__description {
+    @include section__description;
+  }
+
+  &__process-image {
+    @include section__image;
+    margin-bottom: 50px;
+  }
+
+  &__phone-image {
+    @include section__image;
+  }
+
+  &__gradient {
+    @include section__image;
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+  }
+}

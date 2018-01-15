@@ -1,0 +1,15 @@
+.simple-bank {
+  background-color: #fff;
+
+  &__title {
+    @include section__title;
+  }
+
+  &__description {
+    @include section__description;
+  }
+
+  &__image {
+    @include section__image;
+  }
+}

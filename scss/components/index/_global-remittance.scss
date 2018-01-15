@@ -1,0 +1,51 @@
+.global-remittance {
+  padding-bottom: 0 !important;
+  background-color: #f7f7f7;
+
+  &__title {
+    @include section__title;
+  }
+
+  &__description {
+    @include section__description;
+  }
+
+  &__graph-image {
+    @include section__image;
+    margin-bottom: 20px;
+  }
+
+  &__hand-image {
+    @include section__image;
+  }
+
+  .horizontal-line {
+    width: 20px;
+    height: 1px;
+    background-color: #f0f0f0;
+    margin-bottom: 30px;
+  }
+
+  &__more-commission {
+    color: #15689f;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 13px 30px;
+    background-color: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -107px;
+
+    * {
+      vertical-align: middle;
+    }
+
+    img {
+      width: 12px;
+      margin-left: 5px;
+    }
+  }
+}
