@@ -1,0 +1,19 @@
+.loan {
+  color: #fff;
+  background-color: #333b58;
+  text-align: center;
+  padding-bottom: 0 !important;
+  position: relative;
+
+  &__title {
+    @include section__title;
+  }
+
+  &__description {
+    @include section__description;
+  }
+
+  &__image {
+    @include section__image;
+  }
+}

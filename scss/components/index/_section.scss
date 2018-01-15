@@ -9,6 +9,7 @@
   font-weight: 500;
   line-height: 1.5;
   margin: 0 20px 20px;
+  word-break: keep-all;
 }
 
 @mixin section__description {

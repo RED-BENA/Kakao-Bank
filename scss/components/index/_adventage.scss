@@ -1,0 +1,49 @@
+.adventage {
+  background-color: #f7f7f7;
+  text-align: center;
+
+  .horizontal-line {
+    width: 70px;
+    height: 1px;
+    background-color: #000;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @include section__title;
+  }
+
+  &__description {
+    @include section__description;
+  }
+
+  &__image {
+    @include section__image;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    li {
+      padding: 40px 0;
+      border-bottom: 1px solid #e6e6e6;
+    }
+
+    li:last-child {
+      border: 0;
+    }
+
+    &__title {
+      @include section__title;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      @include section__title;
+      font-size: 14px;
+    }
+  }
+}

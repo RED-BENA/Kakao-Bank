@@ -1,0 +1,14 @@
+.check-card {
+  &__title {
+    @include section__title;
+    text-align: center;
+  }
+
+  &__description {
+    @include section__description;
+  }
+
+  &__image {
+    @include section__image;
+  }
+}
