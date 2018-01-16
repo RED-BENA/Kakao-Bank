@@ -20,5 +20,21 @@ $(document).ready(function() {
       $('.js-loan__moon').removeClass('rise');
       $('.js-loan__star').removeClass('rise');
     }
+  });
+
+  $('html, .js-slide-menu__header__close, .js-slide-menu__header__logo').click(function(e) {
+    // 메뉴 닫기
+    e.stopPropagation();
+    $('.js-slide-menu').slideUp();
+    $('.js-dim-bg').hide();
+    $('html').css('overflow', 'scroll');
+  });
+
+  $('.js-index__header__hamburger').click(function(e) {
+    // 메뉴 열기
+    e.stopPropagation();
+    $('.js-slide-menu').slideDown();
+    $('.js-dim-bg').show();
+    $('html').css('overflow', 'hidden');
   })
 });

@@ -3,6 +3,7 @@
   text-align: center;
   padding-bottom: 0 !important;
   background-color: #6496DC;
+  overflow: hidden;
 
   .wrapper {
     width: 100%;
@@ -66,6 +67,11 @@
     background-color: #fff;
     border-radius: 100%;
     position: absolute;
+    opacity: 0;
+  }
+
+  &__star.rise {
+    opacity: 1;
   }
 
   &__star1 {
