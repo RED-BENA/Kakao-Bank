@@ -1,10 +1,13 @@
 @import "base/mediaquery.scss";
 @import "base/all.scss";
-@import "base/slide-menu.scss";
 
-@import "components/index/header.scss";
+@import "components/common/header.scss";
+@import "components/common/other-header.scss";
+@import "components/common/section.scss";
+@import "components/common/slide-menu.scss";
+
+@import "components/index/index-header.scss";
 @import "components/index/banner.scss";
-@import "components/index/section.scss";
 @import "components/index/simple-bank.scss";
 @import "components/index/global-remittance.scss";
 @import "components/index/reasonable-saving.scss";

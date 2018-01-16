@@ -1,8 +1,9 @@
-.index__header {
+@mixin header {
   width: 100%;
   height: 45px;
-  padding: 15px;
-  padding-bottom: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 15px 15px 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +19,7 @@
       display: block;
       width: 100%;
       height: 100%;
-      background-image: url(../images/hamburger_menu_white_mobile.png);
+      background-image: url("../images/hamburger_menu_mobile.png");
     }
   }
 
@@ -33,20 +34,7 @@
       width: 100%;
       height: 100%;
       text-indent: -9999px;
-      background-image: url(../images/logo_white_mobile.png);
+      background-image: url("../images/logo_mobile.png");
     }
   }
-
-  // &__nav {
-  //   display: inline-block;
-  // }
-  //
-  // &__nav ul {
-  //   @include clearfix;
-  // }
-  //
-  // &__nav ul li {
-  //   float: left;
-  //   padding: 0 15px;
-  // }
 }

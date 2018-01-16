@@ -1,0 +1,30 @@
+.index-header {
+  @include header;
+  background-color: transparent;
+  border: 0;
+
+  &__hamburger {
+    a {
+      background-image: url(../images/hamburger_menu_white_mobile.png);
+    }
+  }
+
+  &__logo {
+    a {
+      background-image: url(../images/logo_white_mobile.png);
+    }
+  }
+
+  // &__nav {
+  //   display: inline-block;
+  // }
+  //
+  // &__nav ul {
+  //   @include clearfix;
+  // }
+  //
+  // &__nav ul li {
+  //   float: left;
+  //   padding: 0 15px;
+  // }
+}
