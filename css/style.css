@@ -59,10 +59,6 @@ img {
       text-indent: -9999px;
       background-image: url("../images/logo_mobile.png"); }
 
-.index__section .index__article {
-  padding: 60px 0;
-  position: relative; }
-
 .slide-menu {
   display: none;
   width: 100%;
@@ -211,6 +207,10 @@ img {
     .banner__download--playstore {
       margin-right: 5px; }
 
+.index-section .index-article {
+  padding: 60px 0;
+  position: relative; }
+
 .simple-bank {
   background-color: #fff; }
   .simple-bank__title {
@@ -298,7 +298,7 @@ img {
   display: block;
   margin: 0 auto;
   position: absolute;
-  bottom: 60px;
+  bottom: 0;
   left: 0; }
 
 .loan {
@@ -318,7 +318,7 @@ img {
     position: absolute;
     bottom: 0;
     left: 0;
-    transition: height 0.5s cubic-bezier(0.2, 0.7, 0.8, 1) 1.5s;
+    transition: height 0.5s cubic-bezier(0.2, 0.7, 0.8, 1) 1.2s;
     z-index: 0; }
   .loan--night.active {
     height: 100%; }
@@ -330,7 +330,7 @@ img {
     position: absolute;
     top: 30px;
     right: -15px;
-    transition: background-color .7s ease-out 1.5s; }
+    transition: background-color .7s ease-out 1.2s; }
   .loan__sun.shadow {
     background-color: #333b58; }
   .loan__moon {
@@ -349,7 +349,7 @@ img {
     position: absolute;
     top: -13px;
     right: 0px;
-    transition: opacity 1s ease-out 1.5s; }
+    transition: opacity 1s ease-out 1.2s; }
   .loan__moon.rise {
     opacity: 1; }
   .loan__star {
@@ -462,3 +462,13 @@ img {
     margin: 0 20px 20px;
     word-break: keep-all;
     font-size: 14px; }
+
+.introduce-section {
+  padding: 0 20px; }
+  .introduce-section .introduce-article {
+    padding: 40px 0; }
+
+.introduce-footer {
+  height: 60px;
+  background-color: #f0f0f0;
+  padding: 10px 0; }

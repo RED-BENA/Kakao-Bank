@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  console.log("!");
   var scrollBottom = 0;
   var day = Math.round($('.js-reasonable-saving__title').offset().top);
   var night = Math.round($('.js-loan__title').offset().top+$('.js-loan__title').height());
@@ -21,20 +22,4 @@ $(document).ready(function() {
       $('.js-loan__star').removeClass('rise');
     }
   });
-
-  $('html, .js-slide-menu__header__close, .js-slide-menu__header__logo').click(function(e) {
-    // 메뉴 닫기
-    e.stopPropagation();
-    $('.js-slide-menu').slideUp(200);
-    $('.js-dim-bg').hide();
-    $('html').css('overflow', 'scroll');
-  });
-
-  $('.js-header__hamburger').click(function(e) {
-    // 메뉴 열기
-    e.stopPropagation();
-    $('.js-slide-menu').slideDown(200);
-    $('.js-dim-bg').show();
-    $('html').css('overflow', 'hidden');
-  })
 });
