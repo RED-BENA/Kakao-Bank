@@ -1,9 +1,28 @@
 .loan {
   color: #fff;
-  background-color: #333b58;
   text-align: center;
   padding-bottom: 0 !important;
-  position: relative;
+  background-color: #6496DC;
+
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &--night {
+    width: 100%;
+    height: 0;
+    background-color: #333b58;
+    position: absolute;
+    bottom: 0; left: 0;
+    transition: height .5s cubic-bezier(0.2, 0.7, 0.8, 1) 1.5s;
+    z-index: 0;
+  }
+
+  &--night.active {
+    height: 100%;
+  }
 
   &__title {
     @include section__title;
