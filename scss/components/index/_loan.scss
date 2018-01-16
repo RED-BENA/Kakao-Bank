@@ -60,6 +60,38 @@
     opacity: 1;
   }
 
+  &__star {
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: absolute;
+  }
+
+  &__star1 {
+    top: 45px;
+    left: 70px;
+    animation: shining 5s infinite;
+  }
+
+  &__star2 {
+    top: 140px;
+    left: 45px;
+    animation: shining 4s infinite;
+  }
+
+  &__star3 {
+    top: 170px;
+    left: 30px;
+    animation: shining 2s infinite;
+  }
+
+  &__star4 {
+    top: 230px;
+    right: 45px;
+    animation: shining 3s infinite;
+  }
+
   &__title {
     @include section__title;
   }
@@ -70,5 +102,22 @@
 
   &__image {
     @include section__image;
+  }
+
+  @keyframes shining {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
   }
 }

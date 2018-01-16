@@ -229,6 +229,28 @@ img {
     transition: opacity 1s ease-out 1.5s; }
   .loan__moon.rise {
     opacity: 1; }
+  .loan__star {
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: absolute; }
+  .loan__star1 {
+    top: 45px;
+    left: 70px;
+    animation: shining 5s infinite; }
+  .loan__star2 {
+    top: 140px;
+    left: 45px;
+    animation: shining 4s infinite; }
+  .loan__star3 {
+    top: 170px;
+    left: 30px;
+    animation: shining 2s infinite; }
+  .loan__star4 {
+    top: 230px;
+    right: 45px;
+    animation: shining 3s infinite; }
   .loan__title {
     font-weight: 500;
     line-height: 1.5;
@@ -242,6 +264,17 @@ img {
     max-width: 320px;
     display: block;
     margin: 0 auto; }
+
+@keyframes shining {
+  0% {
+    opacity: 0;
+    transform: scale(0); }
+  50% {
+    opacity: 1;
+    transform: scale(1); }
+  100% {
+    opacity: 0;
+    transform: scale(0); } }
 
 .check-card__title {
   font-weight: 500;
