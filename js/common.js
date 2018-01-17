@@ -8,7 +8,6 @@ $(document).ready(function() {
   });
 
   $('.js-header__hamburger').click(function(e) {
-    console.log("!");
     // 메뉴 열기
     e.stopPropagation();
     $('.js-slide-menu').slideDown(200);
