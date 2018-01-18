@@ -92,42 +92,51 @@
       top: 30px;
       left: 50%;
       transform: translateX(-50%);
+      opacity: 1;
+      z-index: 1;
+      transition: opacity .2s;
 
-      // &--mask {
-      //   display: block;
-      //   width: 100px;
-      //   height: 100px;
-      //   margin: 0 auto;
-      //   background-size: 300px;
-      //   position: absolute;
-      //   top: 30px;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      //   -webkit-mask: url(../images/mask_black.png);
-      //   mask: url(../images/mask_black.png);
-      //   background-position: 45% 60%;
-      // }
-      //
-      // &--mask.mask1 {
-      //   background-image: url(../images/img_1_20180109.jpg);
-      // }
-      //
-      // &--mask.mask2 {
-      //   background-image: url(../images/img_2_20180109.jpg);
-      // }
-      //
-      // &--mask.mask3 {
-      //   background-image: url(../images/img_3_20180109.jpg);
-      // }
-      //
-      // &--mask.mask4 {
-      //   background-image: url(../images/img_4_20180109.jpg);
-      // }
+      &--mask {
+        display: block;
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        background-size: 300px;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-mask: url(../images/mask_black.png);
+        mask: url(../images/mask_black.png);
+        background-size: 110%;
+        background-position: 45% 60%;
+        transition: background-position .2s;
+      }
+
+      &--mask.mask1 {
+        background-image: url(../images/img_1_20180109.jpg);
+      }
+
+      &--mask.mask2 {
+        background-image: url(../images/img_2_20180109.jpg);
+      }
+
+      &--mask.mask3 {
+        background-image: url(../images/img_3_20180109.jpg);
+      }
+
+      &--mask.mask4 {
+        background-image: url(../images/img_4_20180109.jpg);
+      }
     }
 
-    // &__logo.pass {
-    //   display: none;
-    // }
+    &__logo.clear {
+      opacity: 0;
+    }
+
+    &__logo.clear + &__logo--mask {
+      background-position: right center;
+    }
 
     &__description {
       color: #fff;
