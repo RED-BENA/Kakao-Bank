@@ -1,0 +1,57 @@
+.timeline {
+  padding: 60px 15px 30px;
+
+  &__list {
+
+  }
+
+  &__list__item {
+
+  }
+
+  &__list__item a {
+
+
+    span {
+
+    }
+  }
+
+  &__list__item a:before {
+
+  }
+
+  &__list__item.on a {
+
+  }
+
+  &__list__item.on ~ li a {
+
+  }
+
+  &__list__item.on ~ li a:before {
+
+  }
+
+  .item1 {
+
+  }
+
+  &__list__item:nth-of-type(2) {
+  }
+
+  &__list__item:nth-of-type(3) {
+
+  }
+
+  &__list__item:last-child {
+
+  }
+
+  &__list__date {
+  }
+
+  &__content {
+
+  }
+}
