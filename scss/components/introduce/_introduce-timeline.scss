@@ -1,57 +1,134 @@
 .timeline {
-  padding: 60px 15px 30px;
-
-  &__list {
-
+  background-color: #fafafa;
+  &__wrapper {
+    padding: 60px 0 30px;
+    overflow: hidden; // 길다란 timeline을 감추기 위함
+    margin: 0 15px;
   }
 
-  &__list__item {
-
+  &__inner {
+    position: relative;
   }
 
-  &__list__item a {
+  &__background-bar {
+    height: 1px;
+    background-color: #e6e6e6;
 
-
-    span {
-
+    &--black {
+      height: 1px;
+      background-color: #e6e6e6;
+      width: 50%;
+      height: 1px;
+      background-color: #000;
     }
   }
 
-  &__list__item a:before {
-
+  &__year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    -webkit-transition: margin-left 0.5s;
+    transition: margin-left 0.5s;
   }
 
-  &__list__item.on a {
+  &__year__item {
+    float: left;
+    position: relative;
+    width: 20%;
+    height: 10px;
 
+    .button-year {
+      display: block;
+      position: absolute;
+      top: -38px;
+      right: -40px;
+      width: 80px;
+      height: 44px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .text-year {
+      font-size: 11px;
+      color: #000;
+      text-align: center;
+    }
   }
 
-  &__list__item.on ~ li a {
-
+  &__year__item:after { // 버튼 앞의 line
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
   }
 
-  &__list__item.on ~ li a:before {
-
+  &__year__item.is_unread:after {
+    background-color: #e6e6e6;
   }
 
-  .item1 {
-
+  .timeline__year .button-year .ico_dot { // 이미 지나간 (과거) button-year
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 14px 0 0 -6px;
+    background-image: url(../images/pass-year.png);
+    z-index: 1;
   }
 
-  &__list__item:nth-of-type(2) {
+  &__year .button-year .ico_dot.current-year { // 현재(selected) button-year
+    opacity: 0; // 안 보이게
+    background-image: url(../images/selected-year.png);
+    transition: opacity 0.5s;
   }
 
-  &__list__item:nth-of-type(3) {
-
+  &__year .button-year:hover .ico_dot.current-year, // button-year가 hover 상태이거나
+  &__year .is_selected .button-year .ico_dot.current-year { // 현재(selected) button-year
+    opacity: 1; // 활성화
   }
 
-  &__list__item:last-child {
-
+  &__year .is_unread .button-year .ico_dot { // 아직 읽지 않은 (unread) button-year
+    background-image: url(../images/unread-year.png); // 회색 border, 하양 bg 버튼
   }
 
-  &__list__date {
+  &__year .is_unread .text-year { // 읽지 않은 (unread) 버튼의 text-year
+    color: #888;
   }
 
-  &__content {
+  &__info {
+    padding-top: 40px;
 
+    .text-year {
+      display: block;
+      padding-top: 5px;
+      font-size: 12px;
+      color: #888;
+    }
+  }
+
+  &__info__item {
+    display: none;
+  }
+
+  &__info__item.active {
+    display: block;
+  }
+
+  &__info__title {
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  &__info__description {
+    clear: both;
+    padding-top: 14px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #333;
   }
 }
