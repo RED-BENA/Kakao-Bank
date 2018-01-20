@@ -1,0 +1,93 @@
+.introduce-movies {
+  padding: 60px 0 30px;
+  overflow: hidden;
+
+  &__title {
+    text-align: center;
+    font-weight: 400;
+    @include section__title;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__line {
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  &__slide-show {
+    text-align: center;
+    @include clearfix;
+
+    &__item {
+      width: calc(100vw - 10px);
+      margin: 0 5px;
+      touch-action: none;
+      float: left;
+    }
+
+    &__item:first-child { // 첫번째 item
+      width: calc(100vw - 20px);
+      margin: 0 10px;
+    }
+
+    &__item__thumbnail {
+      width: 100%;
+      height: 162px;
+      margin-bottom: 30px;
+    }
+
+    &__item__title {
+      font-size: 1.125rem;
+      margin-bottom: 15px;
+    }
+
+    &__item__description {
+      font-size: 0.8125rem;
+      line-height: 1.5;
+    }
+
+    &__item &__item__thumbnail {
+      background-size: cover;
+    }
+
+    &__item.item1 &__item__thumbnail {
+      background-image: url(../images/brand_movie_01.jpg);
+    }
+
+    &__item.item2 &__item__thumbnail {
+      background-image: url(../images/brand_movie_02.jpg);
+    }
+
+    &__item.item3 &__item__thumbnail {
+      background-image: url(../images/brand_movie_06_20180109.jpg);
+    }
+
+    &__item.item4 &__item__thumbnail {
+      background-image: url(../images/brand_movie_07_20180109.jpg);
+    }
+
+    &__item.item5 &__item__thumbnail {
+      background-image: url(../images/brand_movie_03.jpg);
+    }
+
+    &__item.item6 &__item__thumbnail {
+      background-image: url(../images/brand_movie_04.jpg);
+    }
+
+    &__item.item7 &__item__thumbnail {
+      background-image: url(../images/brand_movie_05.jpg);
+    }
+  }
+
+  &__indicator {
+
+  }
+
+  &__indicator li {
+    float: left;
+  }
+}

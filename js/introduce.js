@@ -2,6 +2,14 @@ $(document).ready(function() {
   let item = $('.js-introduce-kakaobank__slide-show__item')
   let slideItems = []; // item 배열
   let currentIndex = 0; // 현재 item의 인덱스
+  let movies_width = 0;
+
+  /* introduce-movies__slide-show의 width setting */
+  $('.js-introduce-movies__item').each(function() {
+    movies_width += $(this).outerWidth(true);
+  });
+
+  $('.js-introduce-movies__slide-show').css('width', movies_width+'px');
 
   $('.js-number--current').html(currentIndex+1); // 현재 순서 초기화
 
@@ -9,8 +17,36 @@ $(document).ready(function() {
     slideItems.push($(value)); // item을 배열에 추가한다
   });
 
-  // 이전/다음 버튼을 클릭했을 때
+  /* introduce-kakaobank의 slide-show가 3초마다 다음 장면으로 넘어가도록 구현 */
+  setInterval(function() {
+
+    // 모든 item의 pass와 on 클래스 제거, 로고의 clear 클래스 제거 (초기화)
+    $('.js-slide-show-logo').removeClass('clear');
+    item.removeClass('pass on');
+
+    if (currentIndex == slideItems.length-1) { // 현재 item의 index가 맨끝일 경우
+      slideItems[0].addClass('on'); // 맨처음 item으로
+    } else {
+      slideItems[currentIndex + 1].addClass('on'); // 다음 아이템으로
+    }
+
+    item.each(function(index, value) {
+      if ($(this).hasClass('on')) { // on 클래스가 있을 경우 (현재 item일 경우)
+        currentIndex = index;
+        $('.js-number--current').html(currentIndex+1);
+      }
+    })
+
+    slideItems[currentIndex].addClass('pass'); // 현재 item에 pass 클래스 추가
+    $('.js-slide-show-logo').addClass('clear');
+    setTimeout(function() {
+      $('.js-slide-show-logo').removeClass('clear');
+    }, 400);
+  }, 3000);
+
+  /* introduce-kakaobank의 slide-show에서 이전/다음 버튼을 클릭했을 때 */
   $('.js-prev-arrow, .js-next-arrow').click(function() {
+
     // 모든 item의 pass와 on 클래스 제거, 로고의 clear 클래스 제거 (초기화)
     $('.js-slide-show-logo').removeClass('clear');
     item.removeClass('pass on');
@@ -37,9 +73,20 @@ $(document).ready(function() {
     })
 
     slideItems[currentIndex].addClass('pass'); // 현재 item에 pass 클래스 추가
-    $('.js-slide-show-logo').addClass('clear');
-    setTimeout(function() {
+    $('.js-slide-show-logo').addClass('clear'); // 로고를 투명하게
+    setTimeout(function() { // 0.4초 후 clear 클래스 제거
       $('.js-slide-show-logo').removeClass('clear');
     }, 400);
   });
+
+  $('.js-introduce-movies__item').on('swipeleft', function(e) {
+    if ($(this).attr('margin-left') > -2240) {
+      console.log("!");
+      $('.js-introduce-movies__slide-show').css('margin-left', $(this).attr('margin-left')+"px");
+    }
+  });
+
+  $('.js-introduce-movies__item').on('swiperight', function(e) {
+    console.log("right");
+  })
 });
