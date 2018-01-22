@@ -1,3 +1,11 @@
 .introduce-section {
   margin-top: 45px;
+
+  &__line {
+    width: 30px;
+    height: 1px;
+    background-color: #000;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 }

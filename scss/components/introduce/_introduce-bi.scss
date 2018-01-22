@@ -1,0 +1,29 @@
+.introduce-bi {
+  text-align: center;
+  background-color: #fafafa;
+  padding: 50px 20px 30px;
+
+  &__title {
+    @include section__title;
+  }
+
+  &__image {
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    font-size: 13px;
+  }
+
+  &__seperate {
+    width: 100%;
+    height: 1px;
+    background-color: #e6e6e6;
+    margin: 40px 0;
+  }
+}

@@ -5,11 +5,11 @@ $(document).ready(function() {
   let movies_width = 0;
 
   /* introduce-movies__slide-show의 width setting */
-  $('.js-introduce-movies__item').each(function() {
+  $('.js-slide-show__item').each(function() {
     movies_width += $(this).outerWidth(true);
   });
 
-  $('.js-introduce-movies__slide-show').css('width', movies_width+'px');
+  $('.js-slide-show').css('width', movies_width+'px');
 
   $('.js-number--current').html(currentIndex+1); // 현재 순서 초기화
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
   setInterval(function() {
 
     // 모든 item의 pass와 on 클래스 제거, 로고의 clear 클래스 제거 (초기화)
-    $('.js-slide-show-logo').removeClass('clear');
+    $('.js-slide-show__logo').removeClass('clear');
     item.removeClass('pass on');
 
     if (currentIndex == slideItems.length-1) { // 현재 item의 index가 맨끝일 경우
@@ -38,9 +38,9 @@ $(document).ready(function() {
     })
 
     slideItems[currentIndex].addClass('pass'); // 현재 item에 pass 클래스 추가
-    $('.js-slide-show-logo').addClass('clear');
+    $('.js-slide-show__logo').addClass('clear');
     setTimeout(function() {
-      $('.js-slide-show-logo').removeClass('clear');
+      $('.js-slide-show__logo').removeClass('clear');
     }, 400);
   }, 3000);
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
   $('.js-prev-arrow, .js-next-arrow').click(function() {
 
     // 모든 item의 pass와 on 클래스 제거, 로고의 clear 클래스 제거 (초기화)
-    $('.js-slide-show-logo').removeClass('clear');
+    $('.js-slide-show__logo').removeClass('clear');
     item.removeClass('pass on');
 
     if ($(this).hasClass('js-prev-arrow')) { // 이전 버튼을 눌렀을 때
@@ -73,20 +73,25 @@ $(document).ready(function() {
     })
 
     slideItems[currentIndex].addClass('pass'); // 현재 item에 pass 클래스 추가
-    $('.js-slide-show-logo').addClass('clear'); // 로고를 투명하게
+    $('.js-slide-show__logo').addClass('clear'); // 로고를 투명하게
     setTimeout(function() { // 0.4초 후 clear 클래스 제거
-      $('.js-slide-show-logo').removeClass('clear');
+      $('.js-slide-show__logo').removeClass('clear');
     }, 400);
   });
 
-  $('.js-introduce-movies__item').on('swipeleft', function(e) {
-    if ($(this).attr('margin-left') > -2240) {
-      console.log("!");
-      $('.js-introduce-movies__slide-show').css('margin-left', $(this).attr('margin-left')+"px");
+  $('.js-slide-show__item').on('swipeleft', function(e) {
+    if ($(this).attr('offset-left') > -1920) {
+      $('.js-slide-show').css('margin-left', Number($(this).attr('offset-left'))-320+"px");
+      $('.js-indicator li.active').next().addClass('active');
+      $('.js-indicator li.active').prev().removeClass('active');
     }
   });
 
-  $('.js-introduce-movies__item').on('swiperight', function(e) {
-    console.log("right");
+  $('.js-slide-show__item').on('swiperight', function(e) {
+    if ($(this).attr('offset-left') < 0) {
+      $('.js-slide-show').css('margin-left', Number($(this).attr('offset-left'))+320+"px");
+      $('.js-indicator li.active').prev().addClass('active');
+      $('.js-indicator li.active').next().removeClass('active');
+    }
   })
 });
