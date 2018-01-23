@@ -1,5 +1,45 @@
 .introduce-footer {
   height: 60px;
+  line-height: 60px;
+  text-align: center;
   background-color: #f0f0f0;
-  padding: 10px 0;
+
+  &__sns-list {
+    display: inline-block;
+    vertical-align: middle;
+    @include clearfix;
+  }
+
+  &__sns-list li {
+    float: left;
+  }
+
+  .sns-list__item {
+    width: 25px;
+    height: 25px;
+    background-size: 25px 25px;
+  }
+
+  .sns-list__item.item1 {
+    background-image: url(../images/ico_share_f.png);
+  }
+
+  .sns-list__item.item2 {
+    background-image: url(../images/ico_share_b.png);
+  }
+
+  .sns-list__item.item3 {
+    background-image: url(../images/ico_share_n.png);
+  }
+
+  .sns-list__item.item4 {
+    background-image: url(../images/ico_share_y.png);
+  }
+
+  .sns-list__vertical-line {
+    width: 1px;
+    height: 13px;
+    background-color: #d6d6d6;
+    margin: 5px 10px;
+  }
 }
