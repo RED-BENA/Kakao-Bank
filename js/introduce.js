@@ -19,7 +19,6 @@ $(document).ready(function() {
 
   /* introduce-kakaobank의 slide-show가 3초마다 다음 장면으로 넘어가도록 구현 */
   setInterval(function() {
-
     // 모든 item의 pass와 on 클래스 제거, 로고의 clear 클래스 제거 (초기화)
     $('.js-slide-show__logo').removeClass('clear');
     item.removeClass('pass on');
