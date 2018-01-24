@@ -889,6 +889,9 @@ img {
   padding: 15px 0;
   float: left; }
   .notice__article .tab-menu__header li a {
+    display: block;
+    width: 100%;
+    height: 100%;
     color: #888;
     font-size: 0.9375rem; }
 
@@ -927,6 +930,7 @@ img {
   .notice__article .tab-menu__notice .notice__list.on {
     display: block; }
   .notice__article .tab-menu__notice .notice__page-number {
+    font-size: 0.9375rem;
     text-align: center;
     margin: 20px 0 40px; }
 
@@ -935,6 +939,66 @@ img {
 
 .notice__article .tab-menu__event {
   display: none; }
+  .notice__article .tab-menu__event .event__list {
+    display: none; }
+  .notice__article .tab-menu__event .event__list.on {
+    display: block; }
+  .notice__article .tab-menu__event .event__list__item {
+    padding: 20px;
+    border-bottom: 1px solid #dcdcdc;
+    position: relative; }
+    .notice__article .tab-menu__event .event__list__item:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .notice__article .tab-menu__event .event__list__link {
+    display: block;
+    width: 100%;
+    height: 100%; }
+  .notice__article .tab-menu__event .event__list__link > * {
+    float: left; }
+  .notice__article .tab-menu__event .item__image {
+    width: 45%;
+    padding-right: 20px; }
+  .notice__article .tab-menu__event .item__image img {
+    max-width: 100%; }
+  .notice__article .tab-menu__event .item__description {
+    width: 55%; }
+  .notice__article .tab-menu__event .item__description--only-text {
+    width: 100%;
+    padding-right: 20px;
+    position: relative; }
+    .notice__article .tab-menu__event .item__description--only-text .item__description__container {
+      margin-top: 0; }
+    .notice__article .tab-menu__event .item__description--only-text .item__description__title {
+      white-space: normal;
+      overflow: initial;
+      text-overflow: clip; }
+  .notice__article .tab-menu__event .item__description__container {
+    margin-top: 20px; }
+  .notice__article .tab-menu__event .item__description__title {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  .notice__article .tab-menu__event .item__description__date {
+    font-size: 0.75rem;
+    color: #888; }
+  .notice__article .tab-menu__event .item__detail-arrow {
+    width: 7px;
+    height: 13px;
+    background-image: url(../images/detail-arrow.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%); }
+  .notice__article .tab-menu__event .event__page-number {
+    font-size: 0.9375rem;
+    text-align: center;
+    margin: 20px 0 40px; }
 
 .notice__article .tab-menu__event.on {
   display: block; }

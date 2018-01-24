@@ -19,6 +19,9 @@
       float: left;
 
       a {
+        display: block;
+        width: 100%;
+        height: 100%;
         color: #888;
         font-size: 0.9375rem;
       }
@@ -33,6 +36,7 @@
       }
     }
 
+    // notice tab
     &__notice {
       display: none;
 
@@ -74,6 +78,7 @@
       }
 
       .notice__page-number {
+        font-size: 0.9375rem;
         text-align: center;
         margin: 20px 0 40px;
       }
@@ -83,8 +88,96 @@
       display: block;
     }
 
+    // event tab
     &__event {
       display: none;
+
+      .event__list {
+        display: none;
+      }
+
+      .event__list.on {
+        display: block;
+      }
+
+      .event__list__item {
+        padding: 20px;
+        border-bottom: 1px solid #dcdcdc;
+        position: relative;
+        @include clearfix;
+      }
+
+      .event__list__link {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .event__list__link > * {
+        float: left;
+      }
+
+      .item__image {
+        width: 45%;
+        padding-right: 20px;
+      }
+
+      .item__image img {
+        max-width: 100%;
+      }
+
+      .item__description {
+        width: 55%;
+      }
+
+      .item__description--only-text {
+        width: 100%;
+        padding-right: 20px;
+        position: relative;
+
+        .item__description__container {
+          margin-top: 0;
+        }
+
+        .item__description__title {
+          white-space: normal;
+          overflow: initial;
+          text-overflow: clip;
+        }
+      }
+
+      .item__description__container {
+        margin-top: 20px;
+      }
+
+      .item__description__title {
+        font-size: 0.875rem;
+        line-height: 1.5;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      .item__description__date {
+        font-size: 0.75rem;
+        color: #888;
+      }
+
+      .item__detail-arrow {
+        width: 7px; height: 13px;
+        background-image: url(../images/detail-arrow.png);
+        background-size: cover;
+        position: absolute;
+        top: 50%; right: 0;
+        transform: translateY(-50%);
+      }
+
+      .event__page-number {
+        font-size: 0.9375rem;
+        text-align: center;
+        margin: 20px 0 40px;
+      }
     }
 
     &__event.on {
