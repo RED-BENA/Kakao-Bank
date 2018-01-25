@@ -1,10 +1,4 @@
 .notice__article {
-  &__header {
-    font-size: 18px;
-    margin: 0 15px;
-    padding: 20px 0;
-  }
-
   .tab-menu {
     &__header {
       padding: 0 20px;
@@ -64,17 +58,6 @@
       .item__date {
         color: #888;
         font-size: 0.75rem;
-      }
-
-      .item__detail {
-        display: block;
-        width: 7px;
-        height: 13px;
-        background-image: url(../images/detail-arrow.png);
-        background-size: cover;
-        position: absolute;
-        top: 50%; right: 25px;
-        transform: translateY(-50%);
       }
     }
 
@@ -185,19 +168,6 @@
       font-size: 0.9375rem;
       text-align: center;
       margin: 20px 0 40px;
-    }
-
-    .top-button {
-      width: 50px;
-      height: 50px;
-      background-image: url(../images/top-button.png);
-      position: fixed;
-      bottom: -50px; right: 15px;
-      transition: bottom .2s;
-    }
-
-    .top-button.active {
-      bottom: 15px;
     }
   }
 }

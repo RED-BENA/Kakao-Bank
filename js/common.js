@@ -13,5 +13,13 @@ $(document).ready(function() {
     $('.js-slide-menu').slideDown(200);
     $('.js-dim-bg').show();
     $('html').css('overflow', 'hidden');
-  })
+  });
+
+  $(window).scroll(function() {
+    if ($(document).scrollTop() >= 120) {
+      $('.js-top-button').addClass('active');
+    } else {
+      $('.js-top-button').removeClass('active');
+    }
+  });
 })

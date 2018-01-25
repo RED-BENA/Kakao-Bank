@@ -1,11 +1,4 @@
 $(document).ready(function() {
-  $(window).scroll(function() {
-    if ($(document).scrollTop() >= 120) {
-      $('.js-top-button').addClass('active');
-    } else {
-      $('.js-top-button').removeClass('active');
-    }
-  });
   $('.js-tab-menu__header__item').click(function() {
     if ($(this).index() == 0) {
       $('.js-tab-menu__header__item').removeClass('active');

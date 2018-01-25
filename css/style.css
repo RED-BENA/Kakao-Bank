@@ -24,6 +24,39 @@ img {
     .wrapper {
       max-width: 1165px; } }
 
+.section__header {
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 20px 0; }
+
+.section-header {
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 20px 0; }
+
+.item__detail {
+  display: block;
+  width: 7px;
+  height: 13px;
+  background-image: url(../images/detail-arrow.png);
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%); }
+
+.top-button {
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/top-button.png);
+  position: fixed;
+  bottom: -50px;
+  right: 15px;
+  transition: bottom .2s; }
+
+.top-button.active {
+  bottom: 15px; }
+
 .other-header {
   width: 100%;
   height: 45px;
@@ -870,11 +903,6 @@ img {
     background-color: #d6d6d6;
     margin: 5px 10px; }
 
-.notice__article__header {
-  font-size: 18px;
-  margin: 0 15px;
-  padding: 20px 0; }
-
 .notice__article .tab-menu__header {
   padding: 0 20px;
   border-bottom: 1px solid #dcdbdc; }
@@ -919,16 +947,6 @@ img {
   .notice__article .tab-menu__notice .item__date {
     color: #888;
     font-size: 0.75rem; }
-  .notice__article .tab-menu__notice .item__detail {
-    display: block;
-    width: 7px;
-    height: 13px;
-    background-image: url(../images/detail-arrow.png);
-    background-size: cover;
-    position: absolute;
-    top: 50%;
-    right: 25px;
-    transform: translateY(-50%); }
 
 .notice__article .tab-menu__notice.on {
   display: block; }
@@ -1006,19 +1024,35 @@ img {
   text-align: center;
   margin: 20px 0 40px; }
 
-.notice__article .tab-menu .top-button {
-  width: 50px;
-  height: 50px;
-  background-image: url(../images/top-button.png);
-  position: fixed;
-  bottom: -50px;
-  right: 15px;
-  transition: bottom .2s; }
+.often-question__search {
+  padding: 20px;
+  border-bottom: 1px solid #f0f0f0; }
 
-.notice__article .tab-menu .top-button.active {
-  bottom: 15px; }
+.often-question__search-icon {
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  background-image: url(../images/search-button.png);
+  margin-right: 10px; }
 
-.often-question__article__header {
-  font-size: 18px;
-  margin: 0 15px;
-  padding: 20px 0; }
+.often-question__search-input {
+  font-size: 0.9275rem;
+  outline: none; }
+
+.often-question__list__item {
+  padding: 23px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative; }
+
+.often-question__footer {
+  font-size: 0.75rem;
+  text-align: center;
+  text-decoration: underline;
+  padding: 30px 0 60px; }
+  .often-question__footer__call-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/call-icon.png);
+    vertical-align: middle;
+    margin-right: 8px; }
