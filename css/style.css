@@ -1005,3 +1005,15 @@ img {
   font-size: 0.9375rem;
   text-align: center;
   margin: 20px 0 40px; }
+
+.notice__article .tab-menu .top-button {
+  width: 50px;
+  height: 50px;
+  background-image: url(../images/top-button.png);
+  position: fixed;
+  bottom: -50px;
+  right: 15px;
+  transition: bottom .2s; }
+
+.notice__article .tab-menu .top-button.active {
+  bottom: 15px; }
