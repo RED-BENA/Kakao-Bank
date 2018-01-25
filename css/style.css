@@ -1017,3 +1017,8 @@ img {
 
 .notice__article .tab-menu .top-button.active {
   bottom: 15px; }
+
+.often-question__article__header {
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 20px 0; }
