@@ -16,4 +16,16 @@ $(document).ready(function() {
       $(this).addClass('end');
     }
   });
+
+  $('.js-question-detail__list__item').click(function(e) {
+
+    console.log($(this).find('.js-item-detail'));
+    if ($(this).find('.js-item-detail').hasClass('active')) {
+      $(this).find('.js-item-detail').removeClass('active');
+      $(this).next('.js-question-detail__list__answer').slideUp();
+    } else {
+      $(this).find('.js-item-detail').addClass('active');
+      $(this).next('.js-question-detail__list__answer').slideDown();
+    }
+  });
 });

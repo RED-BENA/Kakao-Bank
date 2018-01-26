@@ -4,15 +4,11 @@
     padding-bottom: 15px;
   }
 
-  &__list {
-    border-top: 1px solid #f0f0f0;
-  }
-
   &__list__item {
     display: none;
     font-size: 0.9375rem;
     line-height: 1.5;
-    border-bottom: 1px solid #f0f0f0;
+    border: 1px solid #f0f0f0;
     padding: 25px 20px;
     padding-right: 50px;
     position: relative;
@@ -33,6 +29,25 @@
     }
   }
 
+  &__list__answer {
+    display: none;
+    color: #666;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-top: 1px solid #ddd;
+    background-color: #f7f7f7;
+    padding: 20px;
+
+    .answer--default {
+      margin-bottom: 25px;
+    }
+
+    .answer--bold {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+  }
+
   &__list__item.active {
     display: block;
   }
@@ -48,6 +63,10 @@
     height: 7px;
     background-image: url(../images/detail-arrow-bottom.png);
     right: 30px;
+  }
+
+  .item__detail.active {
+    background-image: url(../images/detail-arrow-top.png);
   }
 
   &__more-button {
