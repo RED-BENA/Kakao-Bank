@@ -1086,12 +1086,14 @@ img {
   display: none;
   color: #666;
   font-size: 0.875rem;
-  line-height: 1.5;
+  line-height: 2;
   border-top: 1px solid #ddd;
   background-color: #f7f7f7;
   padding: 20px; }
   .question-detail__list__answer .answer--default {
     margin-bottom: 25px; }
+  .question-detail__list__answer .answer--default:last-of-type {
+    margin-bottom: 0; }
   .question-detail__list__answer .answer--bold {
     font-weight: bold;
     margin-bottom: 5px; }
