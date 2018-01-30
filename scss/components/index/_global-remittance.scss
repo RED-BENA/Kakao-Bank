@@ -12,7 +12,6 @@
 
   &__graph-image {
     @include section__image;
-    margin-bottom: 20px;
   }
 
   &__hand-image {
@@ -24,6 +23,10 @@
     height: 1px;
     background-color: #f0f0f0;
     margin-bottom: 30px;
+  }
+
+  .break {
+    display: none;
   }
 
   &__more-commission {
@@ -43,9 +46,53 @@
       vertical-align: middle;
     }
 
-    img {
+    .more-commission__plus--mobile {
       width: 12px;
       margin-left: 5px;
+    }
+
+    .more-commission__plus--pc {
+      display: none;
+      width: 24px;
+      height: 24px;
+      margin-left: 10px;
+    }
+  }
+
+  @include laptop {
+    background-image: url(../../images/home_map.png);
+    background-position: right center;
+    &__content {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__hand-image {
+      width: 40%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .break {
+      display: block;
+    }
+
+    &__more-commission {
+      color: #fff;
+      font-size: 0.9375rem;
+      font-weight: 200;
+      background-color: transparent;
+      border: 0;
+      text-decoration: underline;
+
+      .more-commission__plus--mobile {
+        display: none;
+      }
+
+      .more-commission__plus--pc {
+        display: inline-block;
+      }
     }
   }
 }

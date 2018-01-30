@@ -6,21 +6,25 @@
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.5;
-  margin: 0 20px 20px;
+  margin-bottom: 20px 0 20px;
   word-break: keep-all;
 
   @include laptop {
     font-size: 2.4375rem;
+    margin: 0;
+    margin-bottom: 20px;
   }
 }
 
 @mixin section__description {
   font-size: 14px;
   line-height: 1.5;
-  margin: 0 20px 30px;
+  margin-bottom: 20px 0 30px;
 
   @include laptop {
     font-size: 0.9375rem;
+    margin: 0;
+    margin-bottom: 30px;
   }
 }
 
@@ -28,6 +32,10 @@
   max-width: 320px;
   display: block;
   margin: 0 auto;
+
+  img {
+    max-width: 100%;
+  }
 
   @include laptop {
     display: inline-block;

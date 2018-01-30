@@ -1,13 +1,6 @@
 .simple-bank {
   background-color: #fff;
 
-  &__content {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-  }
-
   &__title {
     @include section__title;
   }
@@ -18,5 +11,14 @@
 
   &__image {
     @include section__image;
+  }
+
+  @include laptop {
+    &__content {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
   }
 }
