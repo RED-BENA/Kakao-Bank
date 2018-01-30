@@ -1,5 +1,14 @@
+@font-face {
+  font-family: 'Yoon 윤고딕';
+  src: url(../../fonts/YoonGothicPro720.woff);
+}
+
 body {
   font-family: '돋움',dotum,Apple SD Gothic Neo,sans-serif;
+
+  @include laptop {
+    font-family: 'Yoon 윤고딕', '돋움';
+  }
 }
 
 li {
@@ -26,7 +35,7 @@ img {
   position: relative;
 
   @include laptop {
-    max-width: 1165px;
+    max-width: 920px;
   }
 }
 

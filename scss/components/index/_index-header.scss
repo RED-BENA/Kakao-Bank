@@ -15,16 +15,17 @@
     }
   }
 
-  // &__nav {
-  //   display: inline-block;
-  // }
-  //
-  // &__nav ul {
-  //   @include clearfix;
-  // }
-  //
-  // &__nav ul li {
-  //   float: left;
-  //   padding: 0 15px;
-  // }
+  @include laptop {
+    &__hamburger {
+      a {
+        background-image: url(../images/hamburger_menu_white.png);
+      }
+    }
+
+    &__logo {
+      a {
+        background-image: url(../images/logo_white.png);
+      }
+    }
+  }
 }

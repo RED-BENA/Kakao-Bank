@@ -2,5 +2,9 @@
   .index-article {
     padding: 60px 0;
     position: relative;
+
+    @include laptop {
+      padding: 100px 0;
+    }
   }
 }

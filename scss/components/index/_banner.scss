@@ -1,8 +1,8 @@
 .banner {
   height: 400px;
-  background-image: url(../images/bg_main_3.jpg);
+  background-image: url("../images/bg_main_3.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: left center;
   padding: 125px 0;
   text-align: center;
 
@@ -18,9 +18,10 @@
 
     button {
       color: #fff;
-      font-size: 12px;
+      font-size: 0.75rem;
       border: 1px solid rgba(255, 255, 255, 0.3);
       border-radius: 3px;
+      margin: 0 5px;
       padding: 10px 22px;
 
       * {
@@ -32,8 +33,102 @@
       }
     }
 
-    &--playstore {
-      margin-right: 5px;
+    &__icon {
+      display: inline-block;
+      width: 15px;
+      height: 17px;
+      background-size: cover;
+    }
+
+    &--playstore &__icon {
+        background-image: url("../../images/playstore_mobile.png");
+    }
+
+    &--appstore &__icon {
+        background-image: url("../../images/appstore_mobile.png");
+    }
+  }
+
+  &__submit-papers {
+    display: none;
+    background-color: #ffde00;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.35);
+
+    * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &--main {
+      font-size: 1.0625rem;
+      font-weight: bold;
+    }
+
+    .seperate {
+      width: 1px;
+      height: 13px;
+      background-color: #ccb200;
+      margin: 0 10px;
+    }
+
+    &--sub {
+      font-size: 0.8125rem;
+    }
+
+    .right-arrow {
+      width: 10px;
+      height: 17px;
+      background-image: url(../../images/submit_right-arrow.png);
+      background-size: cover;
+      margin-left: 35px;
+    }
+  }
+
+  @include laptop {
+    height: 680px;
+    position: relative;
+
+    &__title {
+      font-size: 3.3125rem;
+      margin: 0;
+      position: absolute;
+      top: 225px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &__download {
+      position: absolute;
+      top: 410px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      button {
+        font-size: 1.25rem;
+        padding: 15px 40px;
+      }
+
+      &__icon {
+        width: 26px;
+        height: 27px;
+      }
+
+      &--playstore &__icon {
+        background-image: url("../../images/playstore.png");
+      }
+
+      &--appstore &__icon {
+          background-image: url("../../images/appstore.png");
+      }
+    }
+
+    &__submit-papers {
+      display: block;
     }
   }
 }
