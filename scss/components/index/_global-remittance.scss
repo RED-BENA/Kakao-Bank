@@ -12,6 +12,14 @@
 
   &__graph-image {
     @include section__image;
+
+    &--pc {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
   }
 
   &__hand-image {
@@ -23,10 +31,6 @@
     height: 1px;
     background-color: #f0f0f0;
     margin-bottom: 30px;
-  }
-
-  .break {
-    display: none;
   }
 
   &__more-commission {
@@ -62,10 +66,21 @@
   @include laptop {
     background-image: url(../../images/home_map.png);
     background-position: right center;
+
     &__content {
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    &__graph-image {
+      &--pc {
+        display: block;
+      }
+
+      &--mobile {
+        display: none;
+      }
     }
 
     &__hand-image {

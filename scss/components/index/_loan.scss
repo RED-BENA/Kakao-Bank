@@ -6,9 +6,14 @@
   overflow: hidden;
 
   .wrapper {
+    max-width: 1065px;
     width: 100%;
     height: 100%;
     z-index: 1;
+  }
+
+  .break {
+    display: block;
   }
 
   &--night {
@@ -31,7 +36,8 @@
     background-color: #ffe400;
     border-radius: 100%;
     position: absolute;
-    top: 30px; right: -15px;
+    top: 30px;
+    right: -15px;
     transition: background-color .7s ease-out 1.2s;
   }
 
@@ -44,17 +50,14 @@
     height: 64px;
     border-radius: 50%;
     box-shadow: 10px -17px 0 0 #fff;
-    -ms-transform: rotate(100deg);
-    /* IE 9 */
-    -webkit-transform: rotate(100deg);
-    /* Chrome, Safari */
-    -o-transform: rotate(100deg);
     transform: rotate(100deg);
     margin: 30px 0 0 120px;
     opacity: 0;
     position: absolute;
-    top: -13px; right: 0px;
+    top: -13px;
+    right: 0px;
     transition: opacity 1s ease-out 1.2s;
+    z-index: 1;
   }
 
   &__moon.rise {
@@ -62,6 +65,7 @@
   }
 
   &__star {
+    display: none;
     width: 4px;
     height: 4px;
     background-color: #fff;
@@ -71,7 +75,7 @@
   }
 
   &__star.rise {
-    opacity: 1;
+    display: block;
   }
 
   &__star1 {
@@ -124,6 +128,36 @@
     100% {
       opacity: 0;
       transform: scale(0);
+    }
+  }
+
+  @include laptop {
+    .break {
+      display: none;
+    }
+
+    &__sun {
+      width: 110px;
+      height: 110px;
+      top: 30px;
+      right: 0px;
+    }
+
+    &__moon {
+      width: 110px;
+      height: 110px;
+      box-shadow: 30px -17px 0 0 #fff;
+      transform: rotate(70deg);
+      top: -21px;
+      right: 27px;
+    }
+
+    &__description {
+      margin-bottom: 90px;
+    }
+
+    &__image {
+      margin: 0 auto;
     }
   }
 }

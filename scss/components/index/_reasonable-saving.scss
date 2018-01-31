@@ -1,4 +1,6 @@
 .reasonable-saving {
+  @include clearfix;
+
   &__title {
     @include section__title;
   }
@@ -21,5 +23,24 @@
     position: absolute;
     bottom: 0;
     left: 0;
+  }
+
+  @include laptop {
+    &__content {
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%);
+    }
+
+    &__process-image {
+      display: block;
+      width: 100%;
+    }
+
+    &__gradient {
+      display: none;
+    }
   }
 }
