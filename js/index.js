@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  console.log("!");
   var scrollBottom = scrollBottom = $(this).scrollTop()+$(window).height();;
   var day = Math.round($('.js-reasonable-saving__title').offset().top);
   var night = Math.round($('.js-loan__title').offset().top+$('.js-loan__title').height());
+  var slider_length = 0;
 
   if (night <= scrollBottom) { // 일정 스크롤이 넘어가면 (아래)
     $('.js-loan--night').addClass('active'); // 하늘이 어두워짐
@@ -17,6 +17,12 @@ $(document).ready(function() {
     $('.js-loan__moon').removeClass('rise');
     $('.js-loan__star').removeClass('rise');
   }
+
+  $('.js-check-card__slider__item').each(function() {
+    slider_length += $(this).outerWidth(true);
+  });
+
+  $('.js-check-card__slider').css('width', slider_length+'px');
 
   $(document).scroll(function() {
     scrollBottom = $(this).scrollTop()+$(window).height();

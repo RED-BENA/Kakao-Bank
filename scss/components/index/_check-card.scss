@@ -1,4 +1,7 @@
 .check-card {
+  padding: 150px 20px !important;
+  text-align: center;
+
   &__title {
     @include section__title;
     text-align: center;
@@ -10,5 +13,98 @@
 
   &__image {
     @include section__image;
+  }
+
+  &__slider__wrapper {
+    display: none;
+    width: 780px;
+    height: 440px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &__slider {
+    height: 100%;
+    @include clearfix;
+  }
+
+  &__slider li {
+    width: 240px;
+    height: 100%;
+    box-sizing: content-box;
+    margin-right: 25px;
+    position: relative;
+    float: left;
+
+    img {
+      display: block;
+      max-width: 100%;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__slider li:last-child {
+    margin-right: 0;
+  }
+
+  &__slider li.active {
+    img {
+      width: 280px;
+      max-width: initial;
+      z-index: 1;
+      left: -20px;
+    }
+  }
+
+  &__prev-arrow {
+    display: none;
+    width: 38px;
+    height: 72px;
+    background-image: url(../../images/img-left.png);
+    position: absolute;
+    top: 450px;
+    left: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  &__next-arrow {
+    display: none;
+    width: 38px;
+    height: 72px;
+    background-image: url(../../images/img-right.png);
+    position: absolute;
+    top: 450px;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  @include laptop {
+    .wrapper {
+      max-width: 1165px;
+    }
+
+    &__description {
+      margin-bottom: 60px;
+    }
+
+    &__image {
+      display: none;
+    }
+
+    &__slider__wrapper {
+      display: block;
+    }
+
+    &__prev-arrow {
+      display: block;
+    }
+
+    &__next-arrow {
+      display: block;
+    }
   }
 }
