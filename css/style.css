@@ -29,7 +29,7 @@ img {
   position: relative; }
   @media (min-width: 1024px) {
     .wrapper {
-      max-width: 960px; } }
+      max-width: 1080px; } }
 
 .section__header {
   font-size: 18px;
@@ -462,9 +462,10 @@ img {
           display: none; } }
   @media (min-width: 1024px) {
     .simple-bank__content {
+      margin-left: 80px;
       position: absolute;
       top: 50%;
-      right: 0;
+      left: 50%;
       transform: translateY(-50%); } }
 
 .global-remittance {
@@ -911,7 +912,6 @@ img {
   .check-card__slider li {
     width: 240px;
     height: 100%;
-    box-sizing: content-box;
     margin-right: 25px;
     position: relative;
     float: left; }
@@ -919,8 +919,9 @@ img {
       display: block;
       max-width: 100%;
       position: absolute;
+      top: 50%;
       left: 0;
-      bottom: 0; }
+      transform: translateY(-50%); }
   .check-card__slider li:last-child {
     margin-right: 0; }
   .check-card__slider li.active img {

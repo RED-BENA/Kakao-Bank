@@ -31,7 +31,6 @@
   &__slider li {
     width: 240px;
     height: 100%;
-    box-sizing: content-box;
     margin-right: 25px;
     position: relative;
     float: left;
@@ -40,8 +39,9 @@
       display: block;
       max-width: 100%;
       position: absolute;
+      top: 50%;
       left: 0;
-      bottom: 0;
+      transform: translateY(-50%)
     }
   }
 
