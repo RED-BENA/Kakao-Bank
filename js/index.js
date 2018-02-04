@@ -3,8 +3,24 @@ $(document).ready(function() {
   var day = Math.round($('.js-reasonable-saving__title').offset().top);
   var night = Math.round($('.js-loan__title').offset().top+$('.js-loan__title').height());
   var slider_length = 0;
-  var card_width = $('.js-check-card__slider__item').outerWidth(true); // check-card__slider__item의 너비
+
+  // check-card__slider__item의 너비
+  var card_width = $('.js-check-card__slider__item').outerWidth(true);
   var current_margin = 0;
+
+  // 체크카드 슬라이더의 width 세팅
+  $.setWidth = function() {
+    // 체크카드 슬라이더의 width 계산
+    $('.js-check-card__slider__item').each(function() {
+      slider_length += card_width;
+    });
+
+    $('.js-check-card__slider').css('width', slider_length+'px');
+  }
+
+  $.setWidth();
+
+  $('.js-check-card__slider').css('margin-left', 0);
 
   if (night <= scrollBottom) { // 일정 스크롤이 넘어가면 (아래)
     $('.js-loan--night').addClass('active'); // 하늘이 어두워짐
@@ -19,13 +35,6 @@ $(document).ready(function() {
     $('.js-loan__moon').removeClass('rise');
     $('.js-loan__star').removeClass('rise');
   }
-
-  $('.js-check-card__slider__item').each(function() {
-    slider_length += $(this).outerWidth(true);
-  });
-
-  // 체크카드 슬라이더의 width 세팅
-  $('.js-check-card__slider').css('width', slider_length+'px');
 
   $(document).scroll(function() {
     scrollBottom = $(this).scrollTop()+$(window).height();
@@ -47,24 +56,29 @@ $(document).ready(function() {
 
   // active된 카드를 제외한 다른 카드를 클릭했을 때
   $('.js-check-card__slider__item:not(.active)').click(function() {
-
+    $('.js-check-card__slider__item').removeClass('active');
+    $(this).addClass('active');
+    $.activateCard();
   });
 
   // 이전 버튼을 클릭했을 때
   $('.js-check-card__prev-arrow').click(function() {
     current_margin += card_width;
-    // current_margin += 240;
-    $('.js-check-card__slider').css('margin-left', current_margin);
+
     $('.js-check-card__slider__item.active').prev().addClass('active');
     $('.js-check-card__slider__item.active').next().removeClass('active');
+
+    $('.js-check-card__slider').css('margin-left', current_margin+'px');
   });
 
   // 다음 버튼을 클릭했을 때
   $('.js-check-card__next-arrow').click(function() {
-    current_margin += (-1 * card_width);
-    // current_margin += (-240);
-    $('.js-check-card__slider').css('margin-left', current_margin);
+    current_margin += card_width * -1;
+
     $('.js-check-card__slider__item.active').next().addClass('active');
     $('.js-check-card__slider__item.active').prev().removeClass('active');
+
+    $('.js-check-card__slider').css('margin-left', current_margin+'px');
   })
 });
+0

@@ -25,10 +25,11 @@
 
   &__slider {
     height: 100%;
+    // transition: margin-left .3s ease-out;
     @include clearfix;
   }
 
-  &__slider li {
+  &__slider__item {
     width: 240px;
     height: 100%;
     margin-right: 25px;
@@ -45,11 +46,11 @@
     }
   }
 
-  &__slider li:last-child {
+  &__slider__item:last-child {
     margin-right: 0;
   }
 
-  &__slider li.active {
+  &__slider__item.active {
     img {
       width: 280px;
       max-width: initial;

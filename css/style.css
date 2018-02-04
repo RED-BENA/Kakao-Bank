@@ -909,22 +909,22 @@ img {
       content: "";
       display: table;
       clear: both; }
-  .check-card__slider li {
+  .check-card__slider__item {
     width: 240px;
     height: 100%;
     margin-right: 25px;
     position: relative;
     float: left; }
-    .check-card__slider li img {
+    .check-card__slider__item img {
       display: block;
       max-width: 100%;
       position: absolute;
       top: 50%;
       left: 0;
       transform: translateY(-50%); }
-  .check-card__slider li:last-child {
+  .check-card__slider__item:last-child {
     margin-right: 0; }
-  .check-card__slider li.active img {
+  .check-card__slider__item.active img {
     width: 280px;
     max-width: initial;
     z-index: 1;
