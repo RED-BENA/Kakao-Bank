@@ -25,7 +25,7 @@
 
   &__slider {
     height: 100%;
-    // transition: margin-left .3s ease-out;
+    transition: margin-left .3s ease-out;
     @include clearfix;
   }
 
