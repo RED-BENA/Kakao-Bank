@@ -3,8 +3,15 @@
   src: url(../../fonts/YoonGothicPro720.woff);
 }
 
+html {
+  position: relative;
+  z-index: -9999;
+}
+
 body {
   font-family: '돋움',dotum,Apple SD Gothic Neo,sans-serif;
+  position: relative;
+  z-index: -9999;
 
   @include laptop {
     font-family: 'Yoon 윤고딕', '돋움';

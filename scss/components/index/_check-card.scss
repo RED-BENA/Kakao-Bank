@@ -1,5 +1,4 @@
 .check-card {
-  padding: 150px 20px !important;
   text-align: center;
 
   &__title {
@@ -88,6 +87,8 @@
   }
 
   @include laptop {
+    padding: 150px 20px !important;
+
     .wrapper {
       max-width: 1165px;
     }

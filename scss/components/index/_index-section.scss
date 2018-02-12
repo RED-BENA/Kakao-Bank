@@ -1,7 +1,11 @@
 .index-section {
+  position: relative;
+  z-index: -9998;
+
   .index-article {
     padding: 60px 0;
     position: relative;
+    z-index: -9997;
 
     @include laptop {
       padding: 100px 0;

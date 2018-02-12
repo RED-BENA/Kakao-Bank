@@ -3,8 +3,14 @@
   font-family: 'Yoon 윤고딕';
   src: url(../../fonts/YoonGothicPro720.woff); }
 
+html {
+  position: relative;
+  z-index: -9999; }
+
 body {
-  font-family: '돋움',dotum,Apple SD Gothic Neo,sans-serif; }
+  font-family: '돋움',dotum,Apple SD Gothic Neo,sans-serif;
+  position: relative;
+  z-index: -9999; }
   @media (min-width: 1024px) {
     body {
       font-family: 'Yoon 윤고딕', '돋움'; } }
@@ -410,17 +416,21 @@ img {
       .banner__submit-papers {
         display: block; } }
 
-.index-section .index-article {
-  padding: 60px 0;
-  position: relative; }
-  @media (min-width: 1024px) {
-    .index-section .index-article {
-      padding: 100px 0; } }
+.index-section {
+  position: relative;
+  z-index: -9998; }
+  .index-section .index-article {
+    padding: 60px 0;
+    position: relative;
+    z-index: -9997; }
+    @media (min-width: 1024px) {
+      .index-section .index-article {
+        padding: 100px 0; } }
 
 .simple-bank {
   background-color: #fff; }
   .simple-bank__title {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
@@ -472,7 +482,7 @@ img {
   padding-bottom: 0 !important;
   background-color: #f7f7f7; }
   .global-remittance__title {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
@@ -600,7 +610,7 @@ img {
   clear: both; }
 
 .reasonable-saving__title {
-  font-size: 1.375rem;
+  font-size: 1.5625rem;
   font-weight: 500;
   line-height: 1.5;
   margin: 0 20px 20px;
@@ -781,7 +791,7 @@ img {
     right: 45px;
     animation: shining 3s infinite; }
   .loan__title {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
@@ -853,10 +863,9 @@ img {
       margin: 0 auto; } }
 
 .check-card {
-  padding: 150px 20px !important;
   text-align: center; }
   .check-card__title {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
@@ -953,33 +962,38 @@ img {
     transform: translateY(-50%);
     cursor: pointer; }
   @media (min-width: 1024px) {
-    .check-card .wrapper {
-      max-width: 1165px; }
-    .check-card__description {
-      margin-bottom: 60px; }
-    .check-card__image {
-      display: none; }
-    .check-card__slider__wrapper {
-      display: block; }
-    .check-card__prev-arrow {
-      display: block; }
-    .check-card__next-arrow {
-      display: block; } }
+    .check-card {
+      padding: 150px 20px !important; }
+      .check-card .wrapper {
+        max-width: 1165px; }
+      .check-card__description {
+        margin-bottom: 60px; }
+      .check-card__image {
+        display: none; }
+      .check-card__slider__wrapper {
+        display: block; }
+      .check-card__prev-arrow {
+        display: block; }
+      .check-card__next-arrow {
+        display: block; } }
 
 .adventage {
   background-color: #f7f7f7;
   text-align: center; }
+  .adventage .wrapper {
+    z-index: -2; }
   .adventage .horizontal-line {
     width: 70px;
     height: 1px;
     background-color: #000;
-    margin: 0 auto; }
+    margin: 0 auto 20px; }
   .adventage__title {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
-    word-break: keep-all; }
+    word-break: keep-all;
+    margin-bottom: 30px; }
     @media (min-width: 1024px) {
       .adventage__title {
         font-size: 2.4375rem;
@@ -1024,7 +1038,7 @@ img {
   .adventage__list li:last-child {
     border: 0; }
   .adventage__list__title {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
@@ -1038,7 +1052,7 @@ img {
         margin: 0;
         margin-bottom: 20px; } }
   .adventage__list__description {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
@@ -1049,6 +1063,55 @@ img {
         font-size: 2.4375rem;
         margin: 0;
         margin-bottom: 20px; } }
+  .adventage__list--pc {
+    display: none;
+    margin-bottom: 70px; }
+  .adventage__map {
+    max-width: 100%; }
+  .adventage__list--pc__line {
+    display: none;
+    width: 100vw;
+    height: 1px;
+    background-color: #eee;
+    position: absolute;
+    top: 600px;
+    left: 0;
+    z-index: -3; }
+  .adventage__description--pc {
+    display: none; }
+    .adventage__description--pc:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .adventage__description--pc__item {
+      width: 25%;
+      float: left; }
+    .adventage__description--pc__item dt {
+      color: #000;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px; }
+    .adventage__description--pc__item dd {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.5; }
+  @media (min-width: 1024px) {
+    .adventage {
+      padding-top: 160px !important; }
+      .adventage .horizontal-line {
+        width: 100px;
+        height: 2px;
+        margin-bottom: 130px; }
+      .adventage__title {
+        margin-bottom: 50px; }
+      .adventage__list {
+        display: none; }
+      .adventage__list--pc {
+        display: block; }
+      .adventage__list--pc__line {
+        display: block; }
+      .adventage__description--pc {
+        display: block; } }
 
 .introduce-section__line {
   width: 30px;
@@ -1065,7 +1128,7 @@ img {
     margin: 0 15px 30px;
     padding: 20px 0; }
   .introduce-kakaobank__title {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
@@ -1320,7 +1383,7 @@ img {
   .introduce-movies__title {
     text-align: center;
     font-weight: 400;
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
@@ -1411,7 +1474,7 @@ img {
   background-color: #fafafa;
   padding: 50px 20px 30px; }
   .introduce-bi__title {
-    font-size: 1.375rem;
+    font-size: 1.5625rem;
     font-weight: 500;
     line-height: 1.5;
     margin: 0 20px 20px;
