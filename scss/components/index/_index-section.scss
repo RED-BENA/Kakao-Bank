@@ -8,7 +8,11 @@
     z-index: -9997;
 
     @include laptop {
-      padding: 100px 0;
+      padding: 100px 10px;
+    }
+
+    @include laptop-l {
+      padding: 100px 0px;
     }
   }
 }

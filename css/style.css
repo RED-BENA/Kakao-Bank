@@ -248,6 +248,104 @@ img {
   right: 0;
   z-index: 9998; }
 
+.footer {
+  font-family: '돋움', dotum;
+  display: none;
+  background-color: #eee;
+  padding: 30px 0 30px; }
+  .footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .footer__menu {
+    margin-bottom: 15px; }
+    .footer__menu:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .footer__menu__item {
+    float: left; }
+    .footer__menu__item a {
+      color: #666;
+      font-size: 11px;
+      font-weight: bold; }
+  .footer__menu__seperate {
+    width: 1px;
+    height: 10px;
+    background-color: #d8d8d8;
+    margin: 5px 15px 0;
+    float: left; }
+  .footer__information:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .footer__information__item {
+    color: #888;
+    margin-right: 20px;
+    font-size: 11px;
+    float: left; }
+    .footer__information__item.copyright {
+      font-size: 10px; }
+  .footer__text--black {
+    color: #000 !important;
+    font-weight: bold !important; }
+  .footer__sns-list {
+    position: absolute;
+    top: 0;
+    right: 0; }
+    .footer__sns-list:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .footer__sns-list__item {
+    height: 19px;
+    margin-right: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left; }
+    .footer__sns-list__item.facebook {
+      width: 10px;
+      background-image: url(../../images/facebook-icon.png); }
+    .footer__sns-list__item.blog {
+      width: 12px;
+      background-image: url(../../images/blog-icon.png); }
+    .footer__sns-list__item.post {
+      width: 12px;
+      background-image: url(../../images/post-icon.png); }
+    .footer__sns-list__item.youtube {
+      width: 23px;
+      height: 16px;
+      background-image: url(../../images/youtube-icon.png); }
+    .footer__sns-list__item a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .footer__sns-list__item:last-child {
+    margin-right: 0; }
+  @media (min-width: 1024px) {
+    .footer {
+      display: block;
+      padding-left: 10px;
+      padding-right: 10px; }
+      .footer__sns-list {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        right: 340px; }
+        .footer__sns-list:after {
+          content: "";
+          display: table;
+          clear: both; } }
+  @media (min-width: 1440px) {
+    .footer__sns-list {
+      position: absolute;
+      top: 0;
+      right: 0; }
+      .footer__sns-list:after {
+        content: "";
+        display: table;
+        clear: both; } }
+
 .index-header {
   width: 100%;
   height: 45px;
@@ -425,7 +523,10 @@ img {
     z-index: -9997; }
     @media (min-width: 1024px) {
       .index-section .index-article {
-        padding: 100px 0; } }
+        padding: 100px 10px; } }
+    @media (min-width: 1440px) {
+      .index-section .index-article {
+        padding: 100px 0px; } }
 
 .simple-bank {
   background-color: #fff; }
@@ -443,7 +544,8 @@ img {
   .simple-bank__description {
     font-size: 14px;
     line-height: 1.5;
-    margin: 0 20px 30px; }
+    margin: 0 20px 30px;
+    word-break: keep-all; }
     @media (min-width: 1024px) {
       .simple-bank__description {
         font-size: 0.9375rem;
@@ -495,7 +597,8 @@ img {
   .global-remittance__description {
     font-size: 14px;
     line-height: 1.5;
-    margin: 0 20px 30px; }
+    margin: 0 20px 30px;
+    word-break: keep-all; }
     @media (min-width: 1024px) {
       .global-remittance__description {
         font-size: 0.9375rem;
@@ -624,7 +727,8 @@ img {
 .reasonable-saving__description {
   font-size: 14px;
   line-height: 1.5;
-  margin: 0 20px 30px; }
+  margin: 0 20px 30px;
+  word-break: keep-all; }
   @media (min-width: 1024px) {
     .reasonable-saving__description {
       font-size: 0.9375rem;
@@ -804,7 +908,8 @@ img {
   .loan__description {
     font-size: 14px;
     line-height: 1.5;
-    margin: 0 20px 30px; }
+    margin: 0 20px 30px;
+    word-break: keep-all; }
     @media (min-width: 1024px) {
       .loan__description {
         font-size: 0.9375rem;
@@ -879,7 +984,8 @@ img {
   .check-card__description {
     font-size: 14px;
     line-height: 1.5;
-    margin: 0 20px 30px; }
+    margin: 0 20px 30px;
+    word-break: keep-all; }
     @media (min-width: 1024px) {
       .check-card__description {
         font-size: 0.9375rem;
@@ -1002,7 +1108,8 @@ img {
   .adventage__description {
     font-size: 14px;
     line-height: 1.5;
-    margin: 0 20px 30px; }
+    margin: 0 20px 30px;
+    word-break: keep-all; }
     @media (min-width: 1024px) {
       .adventage__description {
         font-size: 0.9375rem;
@@ -1070,7 +1177,7 @@ img {
     max-width: 100%; }
   .adventage__list--pc__line {
     display: none;
-    width: 100vw;
+    width: 100%;
     height: 1px;
     background-color: #eee;
     position: absolute;
@@ -1097,7 +1204,7 @@ img {
       line-height: 1.5; }
   @media (min-width: 1024px) {
     .adventage {
-      padding-top: 160px !important; }
+      padding: 160px 10px 60px !important; }
       .adventage .horizontal-line {
         width: 100px;
         height: 2px;
@@ -1144,6 +1251,7 @@ img {
     font-size: 14px;
     line-height: 1.5;
     margin: 0 20px 30px;
+    word-break: keep-all;
     font-size: 13px;
     margin: 0 15px 30px; }
     @media (min-width: 1024px) {

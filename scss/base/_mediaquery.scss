@@ -27,3 +27,9 @@
         @content;
     }
 }
+
+@mixin laptop-l {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}

@@ -1,0 +1,119 @@
+.footer {
+  font-family: '돋움', dotum;
+  display: none;
+  background-color: #eee;
+  padding: 30px 0 30px;
+  @include clearfix;
+
+  &__menu {
+    margin-bottom: 15px;
+    @include clearfix;
+  }
+
+  &__menu__item {
+    float: left;
+
+    a {
+      color: #666;
+      font-size: 11px;
+      font-weight: bold;
+    }
+  }
+
+  &__menu__seperate {
+    width: 1px;
+    height: 10px;
+    background-color: #d8d8d8;
+    margin: 5px 15px 0;
+    float: left;
+  }
+
+  &__information {
+    @include clearfix;
+  }
+
+  &__information__item {
+    color: #888;
+    margin-right: 20px;
+    font-size: 11px;
+    float: left;
+
+    &.copyright {
+      font-size: 10px;
+    }
+  }
+
+  &__text--black {
+    color: #000 !important;
+    font-weight: bold !important;
+  }
+
+  &__sns-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include clearfix;
+  }
+
+  &__sns-list__item {
+    height: 19px;
+    margin-right: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    float: left;
+
+    &.facebook {
+      width: 10px;
+      background-image: url(../../images/facebook-icon.png);
+    }
+
+    &.blog {
+      width: 12px;
+      background-image: url(../../images/blog-icon.png);
+    }
+
+    &.post {
+      width: 12px;
+      background-image: url(../../images/post-icon.png);
+    }
+
+    &.youtube {
+      width: 23px;
+      height: 16px;
+      background-image: url(../../images/youtube-icon.png);
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__sns-list__item:last-child {
+    margin-right: 0;
+  }
+
+  @include laptop {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    &__sns-list {
+      position: absolute;
+      top: auto;
+      bottom: 0;
+      right: 340px;
+      @include clearfix;
+    }
+  }
+
+  @include laptop-l {
+    &__sns-list {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include clearfix;
+    }
+  }
+}
