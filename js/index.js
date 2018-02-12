@@ -66,63 +66,63 @@ $(document).ready(function() {
   $('.js-check-card__slider__item:not(.active)').click(function() {
     $('.js-check-card__slider__item').removeClass('active');
     $(this).addClass('active');
-    $.activateCard();
   });
 
   // 이전 버튼을 클릭했을 때
   $('.js-check-card__prev-arrow').click(function() {
-    var new_clone_card = clone_card;
     current_margin += card_width;
 
     $('.js-check-card__slider__item.active').prev().addClass('active');
     $('.js-check-card__slider__item.active').next().removeClass('active');
 
-    $('.js-check-card__slider').css('margin-left', current_margin+'px');
+    $('.js-check-card__slider').removeClass('disable');
 
     // 첫 카드가 active 상태일 때
     if ($('.js-check-card__slider__item:first-child').hasClass('active')) {
-      var item_name = $('.js-check-card__slider__item:first-child').attr('class').split(' ')[2];
-      var item_number = item_name.substr(item_name.length - 1);
-
-      console.log(item_number);
+      let new_clone_card = clone_card.clone();
+      let item_name = $('.js-check-card__slider__item:first-child').attr('class').split(' ')[2];
+      let item_number = item_name.substr(item_name.length - 1);
 
       if (item_number == 1) {
-        $(new_clone_card[new_clone_card.length - 1]).prependTo('.js-check-card__slider');
+        $('.js-check-card__slider').prepend(new_clone_card);
       } else {
-        $(new_clone_card[item_number - 2]).prependTo('.js-check-card__slider');
+        $('.js-check-card__slider').prepend(new_clone_card);
       }
 
       $.setWidth();
 
-      $('.js-check-card__slider').css('margin-left', '0px');
+      current_margin = -1060;
+      $('.js-check-card__slider').addClass('disable');
     }
+
+    $('.js-check-card__slider').css('margin-left', current_margin+'px');
   });
 
   // 다음 버튼을 클릭했을 때
   $('.js-check-card__next-arrow').click(function() {
-    clone_card = $('.js-check-card__slider__item').clone().removeClass('active');
     current_margin += card_width * -1;
 
     $('.js-check-card__slider__item.active').next().addClass('active');
     $('.js-check-card__slider__item.active').prev().removeClass('active');
 
-    $('.js-check-card__slider').css('margin-left', current_margin+'px');
+    $('.js-check-card__slider').removeClass('disable');
 
     // 마지막 카드가 active 상태일 때
     if ($('.js-check-card__slider__item:last-child').hasClass('active')) {
-      var item_name = $('.js-check-card__slider__item:last-child').attr('class').split(' ')[2];
-      var item_number = item_name.substr(item_name.length - 1);
+      let new_clone_card = clone_card.clone();
+      let item_name = $('.js-check-card__slider__item:last-child').attr('class').split(' ')[2];
+      let item_number = item_name.substr(item_name.length - 1);
 
       if (item_number == 5) {
-        $(clone_card[0]).appendTo('.js-check-card__slider');
+        $('.js-check-card__slider').append(new_clone_card[0]);
       } else {
-        $(clone_card[item_number]).appendTo('.js-check-card__slider');
+        $('.js-check-card__slider').append(new_clone_card[item_number]);
       }
 
       $.setWidth();
-
-      $('.js-check-card__slider').css('margin-left', current_margin+'px');
     }
+
+    $('.js-check-card__slider').css('margin-left', current_margin+'px');
   })
 });
 0

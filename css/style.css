@@ -910,6 +910,8 @@ img {
       content: "";
       display: table;
       clear: both; }
+  .check-card__slider.disable {
+    transition: margin-left 0s; }
   .check-card__slider__item {
     width: 240px;
     height: 100%;

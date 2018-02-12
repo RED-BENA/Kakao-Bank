@@ -29,6 +29,10 @@
     @include clearfix;
   }
 
+  &__slider.disable {
+    transition: margin-left 0s;
+  }
+
   &__slider__item {
     width: 240px;
     height: 100%;
