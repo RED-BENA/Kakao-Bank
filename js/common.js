@@ -4,7 +4,12 @@ $(document).ready(function() {
     e.stopPropagation();
     $('.js-slide-menu').slideUp(200);
     $('.js-dim-bg').hide();
-    $('html').css('overflow', 'scroll');
+
+    if ($(window).width() <= 768) {
+      $('html').css('overflow', 'scroll');
+    } else {
+
+    }
   });
 
   $('.js-header__hamburger').click(function(e) {
@@ -12,7 +17,12 @@ $(document).ready(function() {
     e.stopPropagation();
     $('.js-slide-menu').slideDown(200);
     $('.js-dim-bg').show();
-    $('html').css('overflow', 'hidden');
+
+    if ($(window).width() <= 768) {
+      $('html').css('overflow', 'hidden');
+    } else {
+      $('html').css('overflow', 'scroll');
+    }
   });
 
   $(window).scroll(function() {
