@@ -1,6 +1,7 @@
 .global-remittance {
   padding-bottom: 0 !important;
   background-color: #f7f7f7;
+  overflow: hidden;
 
   &__title {
     @include section__title;
@@ -24,6 +25,14 @@
 
   &__hand-image {
     @include section__image;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity .7s ease-out .5s, transform .7s ease-in;
+  }
+
+  &__hand-image.active {
+    opacity: 1;
+    transform: translateY(0px);
   }
 
   .horizontal-line {

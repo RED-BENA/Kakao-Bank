@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var scrollBottom = scrollBottom = $(this).scrollTop()+$(window).height();;
+  var scrollBottom = $(this).scrollTop()+$(window).height();
   var day = Math.round($('.js-reasonable-saving__title').offset().top);
   var night = Math.round($('.js-loan__title').offset().top+$('.js-loan__title').height());
 
@@ -59,6 +59,14 @@ $(document).ready(function() {
       $('.js-loan__sun').removeClass('shadow');
       $('.js-loan__moon').removeClass('rise');
       $('.js-loan__star').removeClass('rise');
+    }
+
+    if($(this).scrollTop() >= 1265) { // 스크롤이 section3에 도달했을 때
+      $('.js-reasonable-saving__phone-image').addClass('active');
+    }
+
+    if ($(this).scrollTop() >= 500) { // 스크롤이 section2에 도달했을 때
+      $('.js-global-remittance__hand-image').addClass('active');
     }
   });
 

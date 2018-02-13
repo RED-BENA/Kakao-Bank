@@ -582,7 +582,8 @@ img {
 
 .global-remittance {
   padding-bottom: 0 !important;
-  background-color: #f7f7f7; }
+  background-color: #f7f7f7;
+  overflow: hidden; }
   .global-remittance__title {
     font-size: 1.5625rem;
     font-weight: 500;
@@ -632,7 +633,10 @@ img {
   .global-remittance__hand-image {
     max-width: 320px;
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity .7s ease-out .5s, transform .7s ease-in; }
     .global-remittance__hand-image img {
       max-width: 100%;
       vertical-align: top; }
@@ -650,6 +654,9 @@ img {
           display: block; }
         .global-remittance__hand-image--mobile {
           display: none; } }
+  .global-remittance__hand-image.active {
+    opacity: 1;
+    transform: translateY(0px); }
   .global-remittance .horizontal-line {
     width: 20px;
     height: 1px;
@@ -761,7 +768,10 @@ img {
 .reasonable-saving__phone-image {
   max-width: 320px;
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity .7s ease-out .5s, transform .7s ease-in; }
   .reasonable-saving__phone-image img {
     max-width: 100%;
     vertical-align: top; }
@@ -779,6 +789,10 @@ img {
         display: block; }
       .reasonable-saving__phone-image--mobile {
         display: none; } }
+
+.reasonable-saving__phone-image.active {
+  opacity: 1;
+  transform: translateX(0px); }
 
 .reasonable-saving__gradient {
   max-width: 320px;
