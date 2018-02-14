@@ -9,7 +9,7 @@
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/font-kopub/1.0/kopubdotum.css'>
   <link rel="stylesheet" href="../css/style.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
   <script src="../js/common.js"></script>
   <script src="../js/introduce.js"></script>
   <script src="../js/timeline.js"></script>
@@ -17,62 +17,335 @@
 </head>
 
 <body>
-  <header class="other-header">
-    <div class="other-header__hamburger js-header__hamburger">
+  <header class="other-header introduce__header">
+    <div class="introduce__header__hamburger js-header__hamburger">
       <a href="#"></a>
     </div>
 
-    <div class="other-header__logo">
+    <div class="introduce__header__logo">
       <a href="../index.html">Kakaobank</a>
     </div>
+
+    <a class="introduce__header__link" href="../introduce.html">은행소개</a>
+
+    <nav class="introduce__header__navigation">
+      <ul class="introduce__header__navigation__menu">
+        <li>
+          <a href="#">카카오뱅크</a>
+        </li>
+
+        <li>
+          <a href="#">윤리경영</a>
+        </li>
+
+        <li>
+          <a href="#">투자정보</a>
+        </li>
+
+        <li>
+          <a href="#">인재채용</a>
+        </li>
+
+        <li>
+          <a href="#">새소식</a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <div class="slide-menu js-slide-menu">
-    <div class="slide-menu__header">
-      <a href="#" class="slide-menu__header__close js-slide-menu__header__close"></a>
-      <a href="../index.html" class="slide-menu__header__logo js-slide-menu__header__logo"></a>
+    <div class="slide-menu--mobile">
+      <div class="slide-menu--mobile__header">
+        <a href="#" class="slide-menu--mobile__header__close js-slide-menu--mobile__header__close"></a>
+        <a href="index.html" class="slide-menu--mobile__header__logo js-slide-menu--mobile__header__logo"></a>
+      </div>
+
+      <div class="slide-menu--mobile__section">
+        <ul class="slide-menu--mobile__section__list">
+          <li>
+            <a href="html/introduce.html">카카오뱅크 소개</a>
+          </li>
+
+          <li>
+            <a href="html/notice.html">공지/이벤트</a>
+          </li>
+
+          <li>
+            <a href="html/often-question.html">자주묻는질문</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="slide-menu--mobile__footer">
+        <ul class="slide-menu--mobile__footer__list">
+          <li>
+            <a href="#">모바일뱅킹 서비스 이용약관</a>
+          </li>
+
+          <li></li>
+
+          <li>
+            <a href="#">전자금융거래약관</a>
+          </li>
+
+          <li></li>
+
+          <li>
+            <a href="#">개인정보보호정책</a>
+          </li>
+        </ul>
+
+        <p class="slide-menu--mobile__footer__copyright">
+          Copyright © KakaoBank of Korea Corp.
+        </p>
+
+        <button class="go-pc-version">PC버전</button>
+      </div>
     </div>
 
-    <div class="slide-menu__section">
-      <ul class="slide-menu__section__list">
-        <li>
-          <a href="introduce.html">카카오뱅크 소개</a>
-        </li>
+    <div class="slide-menu--pc">
+      <div class="slide-menu--pc__header">
+        <a class="slide-menu--pc__header__logo" href="index.html"></a>
+        <a class="slide-menu--pc__header__close" href="#"></a>
+      </div>
 
-        <li>
-          <a href="notice.html">공지/이벤트</a>
-        </li>
+      <div class="slide-menu--pc__section">
+        <div class="slide-menu--pc__top">
+          <h2 class="slide-menu--pc__section__title">
+            <a href="html/often-question.html">고객센터</a>
+          </h2>
 
-        <li>
-          <a href="often-question.html">자주묻는질문</a>
-        </li>
-      </ul>
-    </div>
+          <div class="slide-menu--pc__section__menu-container">
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="html/often-question.html">이용안내</a>
+              </h3>
 
-    <div class="slide-menu__footer">
-      <ul class="slide-menu__footer__list">
-        <li>
-          <a href="#">모바일뱅킹 서비스 이용약관</a>
-        </li>
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="html/often-question.html">자주묻는질문</a>
+                </li>
 
-        <li></li>
+                <li>
+                  <a href="#">이용시간안내</a>
+                </li>
 
-        <li>
-          <a href="#">전자금융거래약관</a>
-        </li>
+                <li>
+                  <a href="#">ATM 이용안내</a>
+                </li>
 
-        <li></li>
+                <li>
+                  <a href="#">금리안내</a>
+                </li>
 
-        <li>
-          <a href="#">개인정보보호정책</a>
-        </li>
-      </ul>
+                <li>
+                  <a href="#">수수료안내</a>
+                </li>
+              </ul>
+            </div>
 
-      <p class="slide-menu__footer__copyright">
-        Copyright © KakaoBank of Korea Corp.
-      </p>
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="#">상담하기</a>
+              </h3>
 
-      <button class="go-pc-version">PC버전</button>
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="#">고객의 소리</a>
+                </li>
+
+                <li>
+                  <a href="#">1:1 문의</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="#">소비자보호</a>
+              </h3>
+
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="#">소비자보호체계</a>
+                </li>
+
+                <li>
+                  <a href="#">소비자보호우수사례</a>
+                </li>
+
+                <li>
+                  <a href="#">전자민원</a>
+                </li>
+
+                <li>
+                  <a href="#">민원현황공시</a>
+                </li>
+
+                <li>
+                  <a href="#">민원사무편람</a>
+                </li>
+
+                <li>
+                  <a href="#">금융정보</a>
+                </li>
+
+                <li>
+                  <a href="#">금융사기 관련공시</a>
+                </li>
+
+                <li>
+                  <a href="#">보안취약점 신고 안내</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="#">증명서</a>
+              </h3>
+
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="#">나의 증명서발금내역</a>
+                </li>
+
+                <li>
+                  <a href="#">증명서 진위 확인</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="#">약관•서식</a>
+              </h3>
+
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="#">약관</a>
+                </li>
+
+                <li>
+                  <a href="#">서식</a>
+                </li>
+
+                <li>
+                  <a href="#">상품설명서</a>
+                </li>
+
+                <li>
+                  <a href="#">상품공시</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide-menu--pc__bottom">
+          <h2 class="slide-menu--pc__section__title">
+            <a href="html/introduce.html">은행소개</a>
+          </h2>
+
+          <div class="slide-menu--pc__section__menu-list">
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="html/introduce.html">카카오뱅크</a>
+              </h3>
+
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="html/introduce.html">브랜드</a>
+                </li>
+
+                <li>
+                  <a href="#">주주사 소개</a>
+                </li>
+
+                <li>
+                  <a href="#">오시는 길</a>
+                </li>
+
+                <li>
+                  <a href="#">제휴문의</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="#">윤리경영</a>
+              </h3>
+
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="#">윤리강령</a>
+                </li>
+
+                <li>
+                  <a href="#">임직원행동기준</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="#">투자정보</a>
+              </h3>
+
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="#">공시정보</a>
+                </li>
+
+                <li>
+                  <a href="#">재무정보</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="#">인재채용</a>
+              </h3>
+
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="#">영입프로세스</a>
+                </li>
+
+                <li>
+                  <a href="#">진행 중 공고</a>
+                </li>
+
+                <li>
+                  <a href="#">지원자 메뉴</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="slide-menu--pc__section__menu">
+              <h3 class="slide-menu--pc__section__menu__title">
+                <a href="#">새소식</a>
+              </h3>
+
+              <ul class="slide-menu--pc__section__menu__list">
+                <li>
+                  <a href="#">공지사항</a>
+                </li>
+
+                <li>
+                  <a href="#">이벤트</a>
+                </li>
+
+                <li>
+                  <a href="#">보도자료</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 

@@ -3,6 +3,7 @@ $(document).ready(function() {
   let slideItems = []; // item 배열
   let currentIndex = 0; // 현재 item의 인덱스
   let movies_width = 0;
+  let current_margin = 0;
 
   /* introduce-movies__slide-show의 width setting */
   $('.js-slide-show__item').each(function() {
@@ -78,17 +79,26 @@ $(document).ready(function() {
     }, 400);
   });
 
-  $('.js-slide-show__item').on('swipeleft', function(e) {
-    if ($(this).attr('offset-left') > -1920) {
-      $('.js-slide-show').css('margin-left', Number($(this).attr('offset-left'))-320+"px");
+  $('.js-slide-show').on('swipeleft', function(e) {
+    let marginLeft = Number($(this).css('margin-left').substring(0, $(this).css('margin-left').length - 2));
+
+    if (marginLeft > -1920) {
+      current_margin += (-320);
+      console.log(current_margin);
+
+      $(this).css('margin-left', current_margin+"px");
       $('.js-indicator li.active').next().addClass('active');
       $('.js-indicator li.active').prev().removeClass('active');
     }
   });
 
-  $('.js-slide-show__item').on('swiperight', function(e) {
-    if ($(this).attr('offset-left') < 0) {
-      $('.js-slide-show').css('margin-left', Number($(this).attr('offset-left'))+320+"px");
+  $('.js-slide-show').on('swiperight', function(e) {
+    let marginLeft = Number($(this).css('margin-left').substring(0, $(this).css('margin-left').length - 2));
+
+    if (marginLeft < 0) {
+      current_margin += 320;
+
+      $(this).css('margin-left', current_margin+"px");
       $('.js-indicator li.active').prev().addClass('active');
       $('.js-indicator li.active').next().removeClass('active');
     }

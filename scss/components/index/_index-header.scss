@@ -3,6 +3,18 @@
   background-color: transparent;
   border: 0;
 
+  &__navigation {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__navigation li:first-child {
+    border-right: 1px solid rgba(255, 255, 255, .1);
+  }
+
   &__hamburger {
     a {
       background-image: url(../images/hamburger_menu_white_mobile.png);
@@ -16,16 +28,16 @@
   }
 
   @include laptop {
-    &__hamburger {
-      a {
+    &__hamburger a {
         background-image: url(../images/hamburger_menu_white.png);
-      }
     }
 
-    &__logo {
-      a {
+    &__logo a {
         background-image: url(../images/logo_white.png);
-      }
+    }
+
+    &__navigation {
+      display: block;
     }
   }
 }

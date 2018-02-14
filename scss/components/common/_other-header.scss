@@ -1,3 +1,60 @@
-.other-header {
+.introduce__header {
   @include header;
+
+  &__link {
+    display: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    float: left;
+  }
+
+  &__navigation {
+    display: none;
+    margin-top: 30px;
+    margin-right: 50px;
+    float: right;
+  }
+
+  &__navigation__menu {
+    @include clearfix;
+  }
+
+  &__navigation__menu li {
+    padding: 0 30px;
+  }
+
+  &__navigation__menu li a {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+@include laptop {
+  .introduce__header {
+    background-color: #313955;
+    min-height: 80px;
+
+    &__hamburger {
+      border-left: 1px solid #464d66;
+    }
+
+    &__hamburger a {
+      background-image: url("../images/hamburger_menu_white.png");
+    }
+
+    &__logo a {
+      background-image: url("../images/logo_white.png");
+    }
+
+    &__link {
+      display: block;
+    }
+
+    &__navigation {
+      display: block;
+    }
+  }
 }

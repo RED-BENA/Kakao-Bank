@@ -6,4 +6,8 @@
     margin: 0 auto;
     margin-bottom: 30px;
   }
+
+  @include laptop {
+    margin-top: 80px;
+  }
 }
