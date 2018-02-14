@@ -1,0 +1,104 @@
+.introduce__header {
+  @include header;
+  line-height: 74px;
+
+  &__link {
+    display: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 80px;
+    margin: 0;
+    float: left;
+  }
+
+  &__navigation {
+    display: none;
+    margin: 0;
+    margin-right: 30px;
+    float: right;
+  }
+
+  &__navigation__menu {
+    display: none;
+    @include clearfix;
+  }
+
+  &__navigation__menu li {
+    margin: 0 25px;
+    padding: 0 10px;
+  }
+
+  &__navigation__menu li.active {
+    border-bottom: 3px solid #fff;
+  }
+
+  &__navigation__menu li a {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__navigation--open {
+    display: none;
+    background-color: #ededed;
+  }
+
+  &__navigation__sub-menu {
+    display: block;
+    width: 580px;
+    margin: 80px auto 0;
+    @include clearfix;
+  }
+
+  &__navigation__sub-menu li {
+    font-family: '돋움', dotum;
+    font-size: 12px;
+    float: left;
+    padding: 20px;
+  }
+
+  &__navigation__sub-menu li a {
+    color: #767676;
+  }
+
+  &__navigation__sub-menu li.active a,
+  &__navigation__sub-menu li:hover a {
+    color: #000;
+  }
+}
+
+@include laptop {
+  .introduce__header {
+    background-color: #313955;
+    height: 80px;
+
+    &__hamburger {
+      border-left: 1px solid #464d66;
+    }
+
+    &__hamburger a {
+      background-image: url("../images/hamburger_menu_white.png");
+    }
+
+    &__logo a {
+      background-image: url("../images/logo_white.png");
+    }
+
+    &__link {
+      display: block;
+    }
+
+    &__navigation {
+      display: block;
+    }
+
+    &__navigation__menu {
+      display: block;
+    }
+
+    &__navigation--open {
+      display: block;
+    }
+  }
+}

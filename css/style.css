@@ -1344,6 +1344,136 @@ img {
       .adventage__description--pc {
         display: block; } }
 
+.introduce__header {
+  width: 100%;
+  height: 45px;
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 15px 15px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  line-height: 74px; }
+  .introduce__header:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .introduce__header__hamburger {
+    float: left; }
+  .introduce__header__hamburger a {
+    display: block;
+    width: 18px;
+    height: 13px;
+    background-image: url("../images/hamburger_menu_mobile.png"); }
+  .introduce__header__navigation {
+    display: none; }
+  .introduce__header__navigation li {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    padding: 0px 20px;
+    float: left; }
+  .introduce__header__navigation li a {
+    color: #fff;
+    font-weight: 200;
+    letter-spacing: 1px; }
+  .introduce__header__logo {
+    display: block; }
+  .introduce__header__logo a {
+    display: block;
+    width: 76px;
+    height: 19px;
+    text-indent: -9999px;
+    background-image: url("../images/logo_mobile.png");
+    margin: 0 auto; }
+  @media (min-width: 1024px) {
+    .introduce__header {
+      height: 80px;
+      padding: 0; }
+      .introduce__header__hamburger {
+        float: right; }
+      .introduce__header__hamburger a {
+        width: 28px;
+        height: 22px;
+        margin: 28px 30px;
+        background-image: url("../images/hamburger_menu.png"); }
+      .introduce__header__logo {
+        float: left; }
+      .introduce__header__logo a {
+        width: 115px;
+        height: 19px;
+        margin: 30px;
+        margin-right: 15px;
+        background-image: url("../images/logo.png"); } }
+  .introduce__header__link {
+    display: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 80px;
+    margin: 0;
+    float: left; }
+  .introduce__header__navigation {
+    display: none;
+    margin: 0;
+    margin-right: 30px;
+    float: right; }
+  .introduce__header__navigation__menu {
+    display: none; }
+    .introduce__header__navigation__menu:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .introduce__header__navigation__menu li {
+    margin: 0 25px;
+    padding: 0 10px; }
+  .introduce__header__navigation__menu li.active {
+    border-bottom: 3px solid #fff; }
+  .introduce__header__navigation__menu li a {
+    font-size: 14px;
+    font-weight: 600; }
+  .introduce__header__navigation--open {
+    display: none;
+    background-color: #ededed; }
+  .introduce__header__navigation__sub-menu {
+    display: block;
+    width: 580px;
+    margin: 80px auto 0; }
+    .introduce__header__navigation__sub-menu:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .introduce__header__navigation__sub-menu li {
+    font-family: '돋움', dotum;
+    font-size: 12px;
+    float: left;
+    padding: 20px; }
+  .introduce__header__navigation__sub-menu li a {
+    color: #767676; }
+  .introduce__header__navigation__sub-menu li.active a,
+  .introduce__header__navigation__sub-menu li:hover a {
+    color: #000; }
+
+@media (min-width: 1024px) {
+  .introduce__header {
+    background-color: #313955;
+    height: 80px; }
+    .introduce__header__hamburger {
+      border-left: 1px solid #464d66; }
+    .introduce__header__hamburger a {
+      background-image: url("../images/hamburger_menu_white.png"); }
+    .introduce__header__logo a {
+      background-image: url("../images/logo_white.png"); }
+    .introduce__header__link {
+      display: block; }
+    .introduce__header__navigation {
+      display: block; }
+    .introduce__header__navigation__menu {
+      display: block; }
+    .introduce__header__navigation--open {
+      display: block; } }
+
 .introduce-section__line {
   width: 30px;
   height: 1px;
@@ -1353,7 +1483,9 @@ img {
 
 @media (min-width: 1024px) {
   .introduce-section {
-    margin-top: 80px; } }
+    text-align: center;
+    margin-top: 0px;
+    padding: 100px 0; } }
 
 .introduce-kakaobank {
   padding-bottom: 0 !important; }
@@ -1486,6 +1618,15 @@ img {
         font-size: 18px; }
       .introduce-kakaobank__slide-show__number--all {
         font-size: 10px; }
+  .introduce-kakaobank__header {
+    display: none; }
+  @media (min-width: 1024px) {
+    .introduce-kakaobank__title {
+      margin-bottom: 30px; }
+    .introduce-kakaobank__description {
+      font-family: '돋움', dotum;
+      line-height: 1.5;
+      letter-spacing: 1px; } }
 
 .introduce-footer {
   height: 60px;

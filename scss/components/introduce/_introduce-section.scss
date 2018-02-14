@@ -8,6 +8,8 @@
   }
 
   @include laptop {
-    margin-top: 80px;
+    text-align: center;
+    margin-top: 0px;
+    padding: 100px 0;
   }
 }
