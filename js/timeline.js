@@ -1,7 +1,17 @@
 $(document).ready(function() {
-  $('.js-timeline__year__item').click(function() {
-    $('.js-timeline__year').css("margin-left", $(this).attr("data-offset-left"));
+  if ($(window).width() < 1024) {
+    $('.js-timeline__year').css("margin-left", "10%");
     //data-offset-left의 value 만큼 (10%, -30%, -70%, -110%)
+  } else {
+    $('.js-timeline__year').css("margin-left", "0%");
+    //data-offset-left의 value 만큼 (0%, -10%, -20%, -30%)
+  }
+
+  $('.js-timeline__year__item').click(function() {
+    if ($(window).width() < 1024) {
+      $('.js-timeline__year').css("margin-left", $(this).attr("offset-left"));
+      //data-offset-left의 value 만큼 (10%, -30%, -70%, -110%)
+    }
 
     $('.js-timeline__year__item').removeClass("is_selected");
     // 모든 year__item에서 is_selected 클래스 제거

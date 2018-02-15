@@ -1,5 +1,6 @@
 .timeline {
   background-color: #fafafa;
+
   &__wrapper {
     padding: 60px 0 30px;
     overflow: hidden; // 길다란 timeline을 감추기 위함
@@ -13,14 +14,14 @@
   &__background-bar {
     height: 1px;
     background-color: #e6e6e6;
+  }
 
-    &--black {
-      height: 1px;
-      background-color: #e6e6e6;
-      width: 50%;
-      height: 1px;
-      background-color: #000;
-    }
+  &__background-bar--black {
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 50%;
+    height: 1px;
+    background-color: #000;
   }
 
   &__year {
@@ -28,7 +29,6 @@
     top: 0;
     left: 0;
     width: 200%;
-    -webkit-transition: margin-left 0.5s;
     transition: margin-left 0.5s;
   }
 
@@ -59,7 +59,7 @@
   &__year__item:after { // 버튼 앞의 line
     content: "";
     display: block;
-    height: 1px;
+    height: 2px;
     width: 100%;
     background-color: #000;
     -webkit-transition: background-color 1s;
@@ -70,24 +70,28 @@
     background-color: #e6e6e6;
   }
 
-  .timeline__year .button-year .ico_dot { // 이미 지나간 (과거) button-year
+  &__year .button-year .ico_dot { // 이미 지나간 (과거) button-year
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 10px;
     height: 10px;
-    margin: 14px 0 0 -6px;
+    margin: 0 0 0 -6px;
     background-image: url(../images/pass-year_mobile.png);
     z-index: 1;
   }
 
+  &__year .button-year .ico_dot.current-year {
+    z-index: 2;
+  }
+
   &__year .button-year .ico_dot.current-year { // 현재(selected) button-year
     opacity: 0; // 안 보이게
-    background-image: url(../images/selected-year_mobile.png);
+    background-image: url(../images/selected-year_mobile.png) !important;
     transition: opacity 0.5s;
   }
 
-  &__year .button-year:hover .ico_dot.current-year, // button-year가 hover 상태이거나
+  &__year .is_unread .button-year:hover .ico_dot.current-year, // button-year가 hover 상태이거나
   &__year .is_selected .button-year .ico_dot.current-year { // 현재(selected) button-year
     opacity: 1; // 활성화
   }
@@ -128,7 +132,124 @@
     clear: both;
     padding-top: 14px;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 2;
     color: #333;
+  }
+
+  @include laptop {
+    &__wrapper {
+      margin: 0 10px;
+      padding: 100px 0 60px;
+      overflow: hidden; // timeline을 감추기 위함
+    }
+
+    &__background-bar {
+      height: 2px;
+      background-color: #e6e6e6;
+    }
+
+    &__background-bar--black {
+      height: 2px;
+      width: 257px;
+      background-color: #000;
+    }
+
+    &__year {
+      // margin-left: 0 !important;
+    }
+
+    &__year__item {
+      float: left;
+      position: relative;
+      width: 100px;
+      height: 10px;
+      transition: width .5s;
+
+      &--text {
+        display: block;
+        position: absolute;
+        top: -38px;
+        right: -40px;
+        width: 80px;
+        height: 44px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      &--year {
+        font-size: 12px;
+        color: #000;
+        text-align: center;
+      }
+    }
+
+    &__year__item.is_selected,
+    &__year__item.is_selected + &__year__item.is_unread {
+      width: 257px;
+    }
+
+    &__year .button-year .ico_dot { // 이미 지나간 (과거) button-year
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      background-image: url(../images/pass-year.png);
+      z-index: 1;
+    }
+
+    &__year .button-year .ico_dot.current-year { // 현재(selected) button-year
+      opacity: 0; // 안 보이게
+      background-image: url(../images/selected-year.png) !important;
+      transition: opacity 0.5s;
+    }
+
+    &__year .is_unread .button-year .ico_dot { // 아직 읽지 않은 (unread) button-year
+      background-image: url(../images/unread-year.png); // 회색 border, 하양 bg 버튼
+    }
+
+    &__info__title {
+      @include clearfix;
+    }
+
+    &__info__title--text {
+      font-weight: normal;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: left;
+      float: left;
+    }
+
+    &__info__title__bar {
+      width: 12px;
+      height: 2px;
+      background-color: #e1e1e1;
+      margin: 10px 10px 0 30px;
+      float: left;
+    }
+
+    &__info__title--date {
+      color: #888;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: left;
+      margin-top: 2px;
+      float: left
+    }
+
+    &__info__description {
+      font-family: '돋움', dotum;
+      text-align: left;
+      clear: both;
+      padding-top: 14px;
+      font-size: 12px;
+      line-height: 18px;
+      color: #333;
+    }
+  }
+
+  @include laptop-l {
+    &__wrapper {
+      width: 1080px;
+      margin: 0 auto;
+    }
   }
 }

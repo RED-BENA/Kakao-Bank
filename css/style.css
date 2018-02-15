@@ -1709,18 +1709,17 @@ img {
   .timeline__background-bar {
     height: 1px;
     background-color: #e6e6e6; }
-    .timeline__background-bar--black {
-      height: 1px;
-      background-color: #e6e6e6;
-      width: 50%;
-      height: 1px;
-      background-color: #000; }
+  .timeline__background-bar--black {
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 50%;
+    height: 1px;
+    background-color: #000; }
   .timeline__year {
     position: absolute;
     top: 0;
     left: 0;
     width: 200%;
-    -webkit-transition: margin-left 0.5s;
     transition: margin-left 0.5s; }
   .timeline__year__item {
     float: left;
@@ -1743,27 +1742,29 @@ img {
   .timeline__year__item:after {
     content: "";
     display: block;
-    height: 1px;
+    height: 2px;
     width: 100%;
     background-color: #000;
     -webkit-transition: background-color 1s;
     transition: background-color 1s; }
   .timeline__year__item.is_unread:after {
     background-color: #e6e6e6; }
-  .timeline .timeline__year .button-year .ico_dot {
+  .timeline__year .button-year .ico_dot {
     position: absolute;
     bottom: 0;
     left: 50%;
     width: 10px;
     height: 10px;
-    margin: 14px 0 0 -6px;
+    margin: 0 0 0 -6px;
     background-image: url(../images/pass-year_mobile.png);
     z-index: 1; }
   .timeline__year .button-year .ico_dot.current-year {
+    z-index: 2; }
+  .timeline__year .button-year .ico_dot.current-year {
     opacity: 0;
-    background-image: url(../images/selected-year_mobile.png);
+    background-image: url(../images/selected-year_mobile.png) !important;
     transition: opacity 0.5s; }
-  .timeline__year .button-year:hover .ico_dot.current-year,
+  .timeline__year .is_unread .button-year:hover .ico_dot.current-year,
   .timeline__year .is_selected .button-year .ico_dot.current-year {
     opacity: 1; }
   .timeline__year .is_unread .button-year .ico_dot {
@@ -1788,8 +1789,89 @@ img {
     clear: both;
     padding-top: 14px;
     font-size: 12px;
-    line-height: 18px;
+    line-height: 2;
     color: #333; }
+  @media (min-width: 1024px) {
+    .timeline__wrapper {
+      margin: 0 10px;
+      padding: 100px 0 60px;
+      overflow: hidden; }
+    .timeline__background-bar {
+      height: 2px;
+      background-color: #e6e6e6; }
+    .timeline__background-bar--black {
+      height: 2px;
+      width: 257px;
+      background-color: #000; }
+    .timeline__year__item {
+      float: left;
+      position: relative;
+      width: 100px;
+      height: 10px;
+      transition: width .5s; }
+      .timeline__year__item--text {
+        display: block;
+        position: absolute;
+        top: -38px;
+        right: -40px;
+        width: 80px;
+        height: 44px;
+        text-align: center;
+        text-decoration: none; }
+      .timeline__year__item--year {
+        font-size: 12px;
+        color: #000;
+        text-align: center; }
+    .timeline__year__item.is_selected,
+    .timeline__year__item.is_selected + .timeline__year__item.is_unread {
+      width: 257px; }
+    .timeline__year .button-year .ico_dot {
+      left: 50%;
+      width: 12px;
+      height: 12px;
+      background-image: url(../images/pass-year.png);
+      z-index: 1; }
+    .timeline__year .button-year .ico_dot.current-year {
+      opacity: 0;
+      background-image: url(../images/selected-year.png) !important;
+      transition: opacity 0.5s; }
+    .timeline__year .is_unread .button-year .ico_dot {
+      background-image: url(../images/unread-year.png); }
+    .timeline__info__title:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .timeline__info__title--text {
+      font-weight: normal;
+      font-size: 20px;
+      font-weight: 600;
+      text-align: left;
+      float: left; }
+    .timeline__info__title__bar {
+      width: 12px;
+      height: 2px;
+      background-color: #e1e1e1;
+      margin: 10px 10px 0 30px;
+      float: left; }
+    .timeline__info__title--date {
+      color: #888;
+      font-weight: normal;
+      font-size: 16px;
+      text-align: left;
+      margin-top: 2px;
+      float: left; }
+    .timeline__info__description {
+      font-family: '돋움', dotum;
+      text-align: left;
+      clear: both;
+      padding-top: 14px;
+      font-size: 12px;
+      line-height: 18px;
+      color: #333; } }
+  @media (min-width: 1440px) {
+    .timeline__wrapper {
+      width: 1080px;
+      margin: 0 auto; } }
 
 .introduce-movies {
   text-align: center;
