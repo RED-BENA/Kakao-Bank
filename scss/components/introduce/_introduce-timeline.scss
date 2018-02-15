@@ -77,13 +77,13 @@
     width: 10px;
     height: 10px;
     margin: 14px 0 0 -6px;
-    background-image: url(../images/pass-year.png);
+    background-image: url(../images/pass-year_mobile.png);
     z-index: 1;
   }
 
   &__year .button-year .ico_dot.current-year { // 현재(selected) button-year
     opacity: 0; // 안 보이게
-    background-image: url(../images/selected-year.png);
+    background-image: url(../images/selected-year_mobile.png);
     transition: opacity 0.5s;
   }
 
@@ -93,7 +93,7 @@
   }
 
   &__year .is_unread .button-year .ico_dot { // 아직 읽지 않은 (unread) button-year
-    background-image: url(../images/unread-year.png); // 회색 border, 하양 bg 버튼
+    background-image: url(../images/unread-year_mobile.png); // 회색 border, 하양 bg 버튼
   }
 
   &__year .is_unread .text-year { // 읽지 않은 (unread) 버튼의 text-year

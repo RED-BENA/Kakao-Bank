@@ -1489,6 +1489,9 @@ img {
 
 .introduce-kakaobank {
   padding-bottom: 0 !important; }
+  .introduce-kakaobank .wrapper {
+    width: 100%;
+    height: 100%; }
   .introduce-kakaobank__header {
     font-size: 18px;
     border-bottom: 1px solid #f0f0f0;
@@ -1553,17 +1556,17 @@ img {
       position: absolute;
       top: 50%;
       transform: translateY(-50%); }
-      .introduce-kakaobank__slide-show__arrow.prev {
-        background-image: url("../images/prev-arrow.png");
-        left: 15px; }
-      .introduce-kakaobank__slide-show__arrow.next {
-        background-image: url("../images/next-arrow.png");
-        right: 15px; }
+    .introduce-kakaobank__slide-show__arrow.prev {
+      background-image: url("../images/prev-arrow_mobile.png");
+      left: 15px; }
+    .introduce-kakaobank__slide-show__arrow.next {
+      background-image: url("../images/next-arrow_mobile.png");
+      right: 15px; }
     .introduce-kakaobank__slide-show__logo {
       display: block;
       width: 100px;
       height: 100px;
-      background-image: url(../images/mask_white.png);
+      background-image: url(../images/mask_white_mobile.png);
       background-size: cover;
       margin: 0 auto;
       position: absolute;
@@ -1573,29 +1576,29 @@ img {
       opacity: 1;
       z-index: 1;
       transition: opacity .2s; }
-      .introduce-kakaobank__slide-show__logo--mask {
-        display: block;
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
-        background-size: 300px;
-        position: absolute;
-        top: 30px;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-mask: url(../images/mask_black.png);
-        mask: url(../images/mask_black.png);
-        background-size: 110%;
-        background-position: 45% 60%;
-        transition: background-position .2s; }
-      .introduce-kakaobank__slide-show__logo--mask.mask1 {
-        background-image: url(../images/img_1_20180109.jpg); }
-      .introduce-kakaobank__slide-show__logo--mask.mask2 {
-        background-image: url(../images/img_2_20180109.jpg); }
-      .introduce-kakaobank__slide-show__logo--mask.mask3 {
-        background-image: url(../images/img_3_20180109.jpg); }
-      .introduce-kakaobank__slide-show__logo--mask.mask4 {
-        background-image: url(../images/img_4_20180109.jpg); }
+    .introduce-kakaobank__slide-show__logo--mask {
+      display: block;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      background-size: 300px;
+      position: absolute;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-mask: url(../images/mask_black_mobile.png);
+      mask: url(../images/mask_black_mobile.png);
+      background-size: 110%;
+      background-position: 45% 60%;
+      transition: background-position .2s; }
+    .introduce-kakaobank__slide-show__logo--mask.mask1 {
+      background-image: url(../images/img_1_20180109.jpg); }
+    .introduce-kakaobank__slide-show__logo--mask.mask2 {
+      background-image: url(../images/img_2_20180109.jpg); }
+    .introduce-kakaobank__slide-show__logo--mask.mask3 {
+      background-image: url(../images/img_3_20180109.jpg); }
+    .introduce-kakaobank__slide-show__logo--mask.mask4 {
+      background-image: url(../images/img_4_20180109.jpg); }
     .introduce-kakaobank__slide-show__logo.clear {
       opacity: 0; }
     .introduce-kakaobank__slide-show__logo.clear + .introduce-kakaobank__slide-show__logo--mask {
@@ -1614,10 +1617,10 @@ img {
       position: absolute;
       bottom: 10px;
       right: 20px; }
-      .introduce-kakaobank__slide-show__number--current {
-        font-size: 18px; }
-      .introduce-kakaobank__slide-show__number--all {
-        font-size: 10px; }
+    .introduce-kakaobank__slide-show__number--current {
+      font-size: 18px; }
+    .introduce-kakaobank__slide-show__number--all {
+      font-size: 10px; }
   .introduce-kakaobank__header {
     display: none; }
   @media (min-width: 1024px) {
@@ -1625,8 +1628,43 @@ img {
       margin-bottom: 30px; }
     .introduce-kakaobank__description {
       font-family: '돋움', dotum;
-      line-height: 1.5;
-      letter-spacing: 1px; } }
+      line-height: 2;
+      margin-bottom: 90px; }
+    .introduce-kakaobank__slide-show {
+      height: 460px; }
+      .introduce-kakaobank__slide-show__logo {
+        width: 200px;
+        height: 200px;
+        background-image: url(../images/mask_white.png);
+        top: 50%;
+        transform: translate(-50%, -50%); }
+      .introduce-kakaobank__slide-show__logo--mask {
+        width: 200px;
+        height: 200px;
+        -webkit-mask: url(../images/mask_black.png);
+        mask: url(../images/mask_black.png);
+        top: 50%;
+        transform: translate(-50%, -50%); }
+      .introduce-kakaobank__slide-show__logo.clear + .introduce-kakaobank__slide-show__logo--mask {
+        background-image: none; }
+      .introduce-kakaobank__slide-show__description {
+        font-size: 33px;
+        top: 315px; }
+      .introduce-kakaobank__slide-show__arrow {
+        width: 40px;
+        height: 80px; }
+      .introduce-kakaobank__slide-show .wrapper {
+        max-width: 1080px;
+        top: 0;
+        left: 0; }
+      .introduce-kakaobank__slide-show__arrow.prev {
+        background-image: url("../images/prev-arrow.png"); }
+      .introduce-kakaobank__slide-show__arrow.next {
+        background-image: url("../images/next-arrow.png"); }
+      .introduce-kakaobank__slide-show__number--current {
+        font-size: 35px; }
+      .introduce-kakaobank__slide-show__number--all {
+        font-size: 19px; } }
 
 .introduce-footer {
   height: 60px;
@@ -1719,17 +1757,17 @@ img {
     width: 10px;
     height: 10px;
     margin: 14px 0 0 -6px;
-    background-image: url(../images/pass-year.png);
+    background-image: url(../images/pass-year_mobile.png);
     z-index: 1; }
   .timeline__year .button-year .ico_dot.current-year {
     opacity: 0;
-    background-image: url(../images/selected-year.png);
+    background-image: url(../images/selected-year_mobile.png);
     transition: opacity 0.5s; }
   .timeline__year .button-year:hover .ico_dot.current-year,
   .timeline__year .is_selected .button-year .ico_dot.current-year {
     opacity: 1; }
   .timeline__year .is_unread .button-year .ico_dot {
-    background-image: url(../images/unread-year.png); }
+    background-image: url(../images/unread-year_mobile.png); }
   .timeline__year .is_unread .text-year {
     color: #888; }
   .timeline__info {
