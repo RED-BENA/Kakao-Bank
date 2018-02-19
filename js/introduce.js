@@ -5,19 +5,6 @@ $(document).ready(function() {
   let movies_width = 0;
   let current_margin = 0;
 
-  /* introduce-movies__slide-show의 width setting */
-  $('.js-slide-show__item').each(function() {
-    movies_width += $(this).outerWidth(true);
-  });
-
-  $('.js-slide-show').css('width', movies_width+'px');
-
-  $('.js-number--current').html(currentIndex+1); // 현재 순서 초기화
-
-  item.each(function(index, value) {
-    slideItems.push($(value)); // item을 배열에 추가한다
-  });
-
   /* introduce-kakaobank의 slide-show가 3초마다 다음 장면으로 넘어가도록 구현 */
   setInterval(function() {
     // 모든 item의 pass와 on 클래스 제거, 로고의 clear 클래스 제거 (초기화)
@@ -79,24 +66,54 @@ $(document).ready(function() {
     }, 400);
   });
 
+  $(window).resize(function() {
+    $('.js-slide-show').css('margin-left', '0px');
+    $('.js-indicator li').removeClass('active');
+    $('.js-indicator li:first-child').addClass('active');
+  })
+
+  /* introduce-movies__slide-show의 width setting */
+  $('.js-slide-show__item').each(function() {
+    movies_width += $(this).outerWidth(true);
+  });
+
+  $('.js-slide-show').css('width', movies_width+'px');
+
+  $('.js-number--current').html(currentIndex+1); // 현재 순서 초기화
+
+  item.each(function(index, value) {
+    slideItems.push($(value)); // item을 배열에 추가한다
+  });
+
   $('.js-slide-show').on('swipeleft', function(e) {
     let marginLeft = Number($(this).css('margin-left').substring(0, $(this).css('margin-left').length - 2));
 
-    if (marginLeft > -1920) {
-      current_margin += (-320);
-      console.log(current_margin);
+    if ($(window).width() < 1024) { // 모바일일 때
+      if (marginLeft > -1920) {
+        current_margin += $('.js-slide-show__item').outerWidth(true) * -1;
 
-      $(this).css('margin-left', current_margin+"px");
-      $('.js-indicator li.active').next().addClass('active');
-      $('.js-indicator li.active').prev().removeClass('active');
+        $(this).css('margin-left', current_margin+"px");
+        $('.js-indicator li.active').next().addClass('active');
+        $('.js-indicator li.active').prev().removeClass('active');
+      }
+    } else { // PC일 때
+      if (marginLeft > -6720) {
+        current_margin += $('.js-slide-show__item').outerWidth(true) * -1;
+        console.log(current_margin);
+
+        $(this).css('margin-left', current_margin+"px");
+        $('.js-indicator li.active').next().addClass('active');
+        $('.js-indicator li.active').prev().removeClass('active');
+      }
     }
+
   });
 
   $('.js-slide-show').on('swiperight', function(e) {
     let marginLeft = Number($(this).css('margin-left').substring(0, $(this).css('margin-left').length - 2));
 
     if (marginLeft < 0) {
-      current_margin += 320;
+      current_margin += $('.js-slide-show__item').outerWidth(true);
 
       $(this).css('margin-left', current_margin+"px");
       $('.js-indicator li.active').prev().addClass('active');

@@ -13,10 +13,10 @@ $(document).ready(function() {
       //data-offset-left의 value 만큼 (10%, -30%, -70%, -110%)
     }
 
-    $('.js-timeline__year__item').removeClass("is_selected");
-    // 모든 year__item에서 is_selected 클래스 제거
+    $('.js-timeline__year__item').removeClass("is_selected is_unread");
+    // 모든 year__item에서 is_selected, id_unread 클래스 제거
 
-    $(this).addClass("is_selected").removeClass("is_unread");
+    $(this).addClass("is_selected")
     // is_selected (현재 year-button) 클래스 추가, unread 클래스 제거
 
     $('.is_selected ~ .js-timeline__year__item').addClass('is_unread');

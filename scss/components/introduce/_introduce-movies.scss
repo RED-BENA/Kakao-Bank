@@ -26,6 +26,7 @@
     &__item__thumbnail {
       width: 100%;
       height: 162px;
+      background-size: cover;
       margin-bottom: 30px;
       padding: 15px 20px;
       position: relative;
@@ -40,6 +41,10 @@
       }
 
       .thumbnail__play-button {
+        display: block;
+        width: 35px;
+        height: 45px;
+        background-image: url(../../images/play-mobile-s.png);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -57,36 +62,32 @@
       line-height: 1.5;
     }
 
-    &__item__thumbnail {
-      background-size: cover;
-    }
-
     &__item.item1 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_01.jpg);
+      background-image: url(../images/brand_movie_01_mobile.jpg);
     }
 
     &__item.item2 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_02.jpg);
+      background-image: url(../images/brand_movie_02_mobile.jpg);
     }
 
     &__item.item3 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_06_20180109.jpg);
+      background-image: url(../images/brand_movie_06_mobile.jpg);
     }
 
     &__item.item4 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_07_20180109.jpg);
+      background-image: url(../images/brand_movie_07_mobile.jpg);
     }
 
     &__item.item5 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_03.jpg);
+      background-image: url(../images/brand_movie_03_mobile.jpg);
     }
 
     &__item.item6 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_04.jpg);
+      background-image: url(../images/brand_movie_04_mobile.jpg);
     }
 
     &__item.item7 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_05.jpg);
+      background-image: url(../images/brand_movie_05_mobile.jpg);
     }
   }
 
@@ -114,5 +115,90 @@
     display: block;
     width: 100%;
     height: 100%;
+  }
+
+  @include laptop {
+    margin-bottom: 60px;
+
+    &__title {
+      font-size: 1.9375rem;
+    }
+
+    .slide-show {
+      &__item {
+        width: 1080px;
+        box-sizing: content-box;
+        margin: 0;
+        padding: 20px;
+      }
+
+      &__item__thumbnail {
+        height: 608px;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+
+        .thumbnail__title {
+          font-size: 1.0625rem;
+        }
+
+        .thumbnail__play-button {
+          display: block;
+          width: 75px;
+          height: 84px;
+          background-image: url(../../images/play.png);
+        }
+      }
+
+      &__item__title {
+        font-size: 1.3125rem;
+        margin-bottom: 20px;
+      }
+
+      &__item__description {
+        font-family: '돋움', dotum;
+        font-size: 0.75rem;
+        line-height: 1.5;
+      }
+
+      &__item.item1 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_01.jpg);
+      }
+
+      &__item.item2 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_02.jpg);
+      }
+
+      &__item.item3 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_06.jpg);
+      }
+
+      &__item.item4 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_07.jpg);
+      }
+
+      &__item.item5 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_03.jpg);
+      }
+
+      &__item.item6 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_04.jpg);
+      }
+
+      &__item.item7 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_05.jpg);
+      }
+    }
+
+    &__indicator {
+      display: inline-block;
+      margin-top: 30px;
+      @include clearfix;
+    }
+
+    &__indicator li {
+      width: 3px;
+      height: 3px;
+      margin: 0 12px;
+    }
   }
 }

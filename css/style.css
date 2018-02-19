@@ -5,8 +5,7 @@
 
 html {
   position: relative;
-  z-index: -9999;
-  overflow-y: hidden; }
+  z-index: -9999; }
 
 body {
   font-family: '돋움',dotum,Apple SD Gothic Neo,sans-serif;
@@ -1474,6 +1473,9 @@ img {
     .introduce__header__navigation--open {
       display: block; } }
 
+html {
+  overflow: hidden; }
+
 .introduce-section__line {
   width: 30px;
   height: 1px;
@@ -1907,6 +1909,7 @@ img {
     .introduce-movies .slide-show__item__thumbnail {
       width: 100%;
       height: 162px;
+      background-size: cover;
       margin-bottom: 30px;
       padding: 15px 20px;
       position: relative; }
@@ -1918,6 +1921,10 @@ img {
         white-space: nowrap;
         overflow: hidden; }
       .introduce-movies .slide-show__item__thumbnail .thumbnail__play-button {
+        display: block;
+        width: 35px;
+        height: 45px;
+        background-image: url(../../images/play-mobile-s.png);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1928,22 +1935,20 @@ img {
     .introduce-movies .slide-show__item__description {
       font-size: 0.8125rem;
       line-height: 1.5; }
-    .introduce-movies .slide-show__item__thumbnail {
-      background-size: cover; }
     .introduce-movies .slide-show__item.item1 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_01.jpg); }
+      background-image: url(../images/brand_movie_01_mobile.jpg); }
     .introduce-movies .slide-show__item.item2 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_02.jpg); }
+      background-image: url(../images/brand_movie_02_mobile.jpg); }
     .introduce-movies .slide-show__item.item3 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_06_20180109.jpg); }
+      background-image: url(../images/brand_movie_06_mobile.jpg); }
     .introduce-movies .slide-show__item.item4 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_07_20180109.jpg); }
+      background-image: url(../images/brand_movie_07_mobile.jpg); }
     .introduce-movies .slide-show__item.item5 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_03.jpg); }
+      background-image: url(../images/brand_movie_03_mobile.jpg); }
     .introduce-movies .slide-show__item.item6 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_04.jpg); }
+      background-image: url(../images/brand_movie_04_mobile.jpg); }
     .introduce-movies .slide-show__item.item7 .slide-show__item__thumbnail {
-      background-image: url(../images/brand_movie_05.jpg); }
+      background-image: url(../images/brand_movie_05_mobile.jpg); }
   .introduce-movies__indicator {
     display: inline-block;
     margin-top: 30px; }
@@ -1965,6 +1970,59 @@ img {
     display: block;
     width: 100%;
     height: 100%; }
+  @media (min-width: 1024px) {
+    .introduce-movies {
+      margin-bottom: 60px; }
+      .introduce-movies__title {
+        font-size: 1.9375rem; }
+      .introduce-movies .slide-show__item {
+        width: 1080px;
+        box-sizing: content-box;
+        margin: 0;
+        padding: 20px; }
+      .introduce-movies .slide-show__item__thumbnail {
+        height: 608px;
+        box-sizing: border-box;
+        margin-bottom: 50px; }
+        .introduce-movies .slide-show__item__thumbnail .thumbnail__title {
+          font-size: 1.0625rem; }
+        .introduce-movies .slide-show__item__thumbnail .thumbnail__play-button {
+          display: block;
+          width: 75px;
+          height: 84px;
+          background-image: url(../../images/play.png); }
+      .introduce-movies .slide-show__item__title {
+        font-size: 1.3125rem;
+        margin-bottom: 20px; }
+      .introduce-movies .slide-show__item__description {
+        font-family: '돋움', dotum;
+        font-size: 0.75rem;
+        line-height: 1.5; }
+      .introduce-movies .slide-show__item.item1 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_01.jpg); }
+      .introduce-movies .slide-show__item.item2 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_02.jpg); }
+      .introduce-movies .slide-show__item.item3 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_06.jpg); }
+      .introduce-movies .slide-show__item.item4 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_07.jpg); }
+      .introduce-movies .slide-show__item.item5 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_03.jpg); }
+      .introduce-movies .slide-show__item.item6 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_04.jpg); }
+      .introduce-movies .slide-show__item.item7 .slide-show__item__thumbnail {
+        background-image: url(../images/brand_movie_05.jpg); }
+      .introduce-movies__indicator {
+        display: inline-block;
+        margin-top: 30px; }
+        .introduce-movies__indicator:after {
+          content: "";
+          display: table;
+          clear: both; }
+      .introduce-movies__indicator li {
+        width: 3px;
+        height: 3px;
+        margin: 0 12px; } }
 
 .introduce-bi {
   text-align: center;
