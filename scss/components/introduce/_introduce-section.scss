@@ -14,6 +14,11 @@ html {
   @include laptop {
     text-align: center;
     margin-top: 0px;
-    padding: 100px 0;
+    padding-top: 100px;
+
+    &__line {
+      width: 60px;
+      margin-bottom: 50px;
+    }
   }
 }

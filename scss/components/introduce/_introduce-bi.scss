@@ -7,8 +7,18 @@
     @include section__title;
   }
 
-  &__image {
-    margin-bottom: 10px;
+  &__image--symbol {
+    width: 147px;
+    height: 147px;
+    background-image: url(../../images/symbol_mobile-s.png);
+    margin: 0 auto 10px;
+  }
+
+  &__image--wordmark {
+    width: 225px;
+    height: 100px;
+    background-image: url(../../images/wordmark_mobile-s.png);
+    margin: 90px auto 10px;
   }
 
   &__name {
@@ -17,7 +27,7 @@
   }
 
   &__description {
-    font-size: 13px;
+    font-size: 0.8125rem;
   }
 
   &__seperate {
@@ -25,5 +35,63 @@
     height: 1px;
     background-color: #e6e6e6;
     margin: 40px 0;
+  }
+
+  &__download {
+    display: none;
+    font-family: 'Yoon 윤고딕 bold';
+    text-align: center;
+    padding-bottom: 100px;
+    @include clearfix;
+  }
+
+  &__download__wrapper {
+    display: inline-block;
+  }
+
+  &__download__button {
+    display: block;
+    color: #666;
+    font-size: 0.8125rem;
+    background-color: transparent;
+    border: 1px solid #dcdcdc;
+    margin: 0 10px;
+    padding: 15px 100px;
+    float: left;
+  }
+
+  @include laptop {
+    &__title {
+      font-size: 1.9375rem;
+    }
+
+    &__image--symbol {
+      width: 290px;
+      height: 290px;
+      background-image: url(../../images/symbol.png);
+      margin-bottom: 40px;
+    }
+
+    &__image--wordmark {
+      width: 450px;
+      height: 199px;
+      background-image: url(../../images/wordmark.png);
+      margin-bottom: 40px;
+    }
+
+    &__name {
+      font-size: 1.375rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    &__description {
+      font-family: '돋움', dotum;
+      font-size: 0.75rem;
+    }
+
+    &__download {
+      display: block;
+    }
   }
 }

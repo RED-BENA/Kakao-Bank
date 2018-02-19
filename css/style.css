@@ -3,6 +3,10 @@
   font-family: 'Yoon 윤고딕';
   src: url(../../fonts/YoonGothicPro720.woff); }
 
+@font-face {
+  font-family: 'Yoon 윤고딕 bold';
+  src: url(../../fonts/YoonGothicPro750.woff); }
+
 html {
   position: relative;
   z-index: -9999; }
@@ -433,22 +437,12 @@ img {
       padding-right: 10px; }
       .footer__sns-list {
         position: absolute;
-        top: auto;
-        bottom: 0;
-        right: 340px; }
+        top: 0;
+        right: 0; }
         .footer__sns-list:after {
           content: "";
           display: table;
           clear: both; } }
-  @media (min-width: 1440px) {
-    .footer__sns-list {
-      position: absolute;
-      top: 0;
-      right: 0; }
-      .footer__sns-list:after {
-        content: "";
-        display: table;
-        clear: both; } }
 
 .index-header {
   width: 100%;
@@ -1487,7 +1481,10 @@ html {
   .introduce-section {
     text-align: center;
     margin-top: 0px;
-    padding: 100px 0; } }
+    padding-top: 100px; }
+    .introduce-section__line {
+      width: 60px;
+      margin-bottom: 50px; } }
 
 .introduce-kakaobank {
   padding-bottom: 0 !important; }
@@ -1669,6 +1666,7 @@ html {
         font-size: 19px; } }
 
 .introduce-footer {
+  display: block;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -1699,6 +1697,9 @@ html {
     height: 13px;
     background-color: #d6d6d6;
     margin: 5px 10px; }
+  @media (min-width: 1024px) {
+    .introduce-footer {
+      display: none; } }
 
 .timeline {
   background-color: #fafafa; }
@@ -2039,20 +2040,71 @@ html {
         font-size: 2.4375rem;
         margin: 0;
         margin-bottom: 20px; } }
-  .introduce-bi__image {
-    margin-bottom: 10px; }
+  .introduce-bi__image--symbol {
+    width: 147px;
+    height: 147px;
+    background-image: url(../../images/symbol_mobile-s.png);
+    margin: 0 auto 10px; }
+  .introduce-bi__image--wordmark {
+    width: 225px;
+    height: 100px;
+    background-image: url(../../images/wordmark_mobile-s.png);
+    margin: 90px auto 10px; }
   .introduce-bi__name {
     font-size: 1rem;
     margin-bottom: 10px; }
   .introduce-bi__description {
-    font-size: 13px; }
+    font-size: 0.8125rem; }
   .introduce-bi__seperate {
     width: 100%;
     height: 1px;
     background-color: #e6e6e6;
     margin: 40px 0; }
+  .introduce-bi__download {
+    display: none;
+    font-family: 'Yoon 윤고딕 bold';
+    text-align: center;
+    padding-bottom: 100px; }
+    .introduce-bi__download:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .introduce-bi__download__wrapper {
+    display: inline-block; }
+  .introduce-bi__download__button {
+    display: block;
+    color: #666;
+    font-size: 0.8125rem;
+    background-color: transparent;
+    border: 1px solid #dcdcdc;
+    margin: 0 10px;
+    padding: 15px 100px;
+    float: left; }
+  @media (min-width: 1024px) {
+    .introduce-bi__title {
+      font-size: 1.9375rem; }
+    .introduce-bi__image--symbol {
+      width: 290px;
+      height: 290px;
+      background-image: url(../../images/symbol.png);
+      margin-bottom: 40px; }
+    .introduce-bi__image--wordmark {
+      width: 450px;
+      height: 199px;
+      background-image: url(../../images/wordmark.png);
+      margin-bottom: 40px; }
+    .introduce-bi__name {
+      font-size: 1.375rem;
+      font-weight: 600;
+      margin-bottom: 10px; }
+    .introduce-bi__description {
+      font-family: '돋움', dotum;
+      font-size: 0.75rem; }
+    .introduce-bi__download {
+      display: block; } }
 
 .introduce-footer {
+  display: block;
   height: 60px;
   line-height: 60px;
   text-align: center;
@@ -2083,6 +2135,9 @@ html {
     height: 13px;
     background-color: #d6d6d6;
     margin: 5px 10px; }
+  @media (min-width: 1024px) {
+    .introduce-footer {
+      display: none; } }
 
 .notice__article .tab-menu__header {
   padding: 0 20px;

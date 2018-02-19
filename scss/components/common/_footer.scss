@@ -101,16 +101,6 @@
 
     &__sns-list {
       position: absolute;
-      top: auto;
-      bottom: 0;
-      right: 340px;
-      @include clearfix;
-    }
-  }
-
-  @include laptop-l {
-    &__sns-list {
-      position: absolute;
       top: 0;
       right: 0;
       @include clearfix;
