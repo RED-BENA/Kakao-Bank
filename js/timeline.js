@@ -1,6 +1,6 @@
 $(document).ready(function() {
   if ($(window).width() < 1024) {
-    $('.js-timeline__year').css("margin-left", "10%");
+    $('.js-timeline__year').css("margin-left", "-110%");
     //data-offset-left의 value 만큼 (10%, -30%, -70%, -110%)
   } else {
     $('.js-timeline__year').css("margin-left", "0%");

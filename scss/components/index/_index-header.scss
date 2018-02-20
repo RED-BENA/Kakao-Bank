@@ -28,6 +28,8 @@
   }
 
   @include laptop {
+    position: absolute;
+    
     &__hamburger a {
         background-image: url(../images/hamburger_menu_white.png);
     }

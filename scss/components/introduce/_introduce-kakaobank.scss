@@ -7,6 +7,7 @@
   }
 
   &__header {
+    display: block;
     font-size: 18px;
     border-bottom: 1px solid #f0f0f0;
     margin: 0 15px 30px;
@@ -171,11 +172,11 @@
     }
   }
 
-  &__header {
-    display: none;
-  }
-
   @include laptop {
+    &__header {
+      display: none;
+    }
+
     &__title {
       margin-bottom: 30px;
     }
@@ -188,59 +189,59 @@
 
     &__slide-show {
       height: 460px;
+    }
 
-      &__logo {
-        width: 200px;
-        height: 200px;
-        background-image: url(../images/mask_white.png);
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
+    &__slide-show__logo {
+      width: 200px;
+      height: 200px;
+      background-image: url(../images/mask_white.png);
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-      &__logo--mask {
-        width: 200px;
-        height: 200px;
-        -webkit-mask: url(../images/mask_black.png);
-        mask: url(../images/mask_black.png);
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
+    &__slide-show__logo--mask {
+      width: 200px;
+      height: 200px;
+      -webkit-mask: url(../images/mask_black.png);
+      mask: url(../images/mask_black.png);
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-      &__logo.clear + &__logo--mask {
-        background-image: none;
-      }
+    &__slide-show__logo.clear + &__logo--mask {
+      background-image: none;
+    }
 
-      &__description {
-        font-size: 33px;
-        top: 315px;
-      }
+    &__slide-show__description {
+      font-size: 33px;
+      top: 315px;
+    }
 
-      &__arrow {
-        width: 40px;
-        height: 80px;
-      }
+    &__slide-show__arrow {
+      width: 40px;
+      height: 80px;
+    }
 
-      .wrapper {
-        max-width: 1080px;
-        top: 0;
-        left: 0;
-      }
+    .wrapper {
+      max-width: 1080px;
+      top: 0;
+      left: 0;
+    }
 
-      &__arrow.prev {
-        background-image: url("../images/prev-arrow.png");
-      }
+    &__slide-show__arrow.prev {
+      background-image: url("../images/prev-arrow.png");
+    }
 
-      &__arrow.next {
-        background-image: url("../images/next-arrow.png");
-      }
+    &__slide-show__arrow.next {
+      background-image: url("../images/next-arrow.png");
+    }
 
-      &__number--current {
-        font-size: 35px;
-      }
+    &__slide-show__number--current {
+      font-size: 35px;
+    }
 
-      &__number--all {
-        font-size: 19px;
-      }
+    &__slide-show__number--all {
+      font-size: 19px;
     }
   }
 }

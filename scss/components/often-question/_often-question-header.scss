@@ -1,0 +1,30 @@
+.other__header.often-question {
+  .other__header {
+    &__link {
+      color: #000;
+    }
+
+    &__navigation__menu li.active {
+      border-bottom: 3px solid #000;
+    }
+
+    &__navigation li a {
+      color: #000;
+    }
+  }
+}
+
+@include laptop {
+  .other__header.often-question {
+    border: 0;
+    background-color: #ffe100;
+
+    .other__header__hamburger {
+      border-left: 1px solid #e5c600;
+    }
+
+    & + .other__header__navigation--open {
+      background-color: #e5c600;
+    }
+  }
+}

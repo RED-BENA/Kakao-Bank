@@ -54,6 +54,7 @@
   @include laptop {
     height: 80px;
     padding: 0;
+    position: static;
 
     &__hamburger {
       float: right;
