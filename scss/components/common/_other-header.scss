@@ -1,6 +1,7 @@
 .other__header {
   @include header;
   line-height: 74px;
+  position: static;
 
   &__link {
     display: none;

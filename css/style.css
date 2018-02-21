@@ -80,7 +80,8 @@ img {
   top: 0;
   left: 0;
   z-index: 1;
-  line-height: 74px; }
+  line-height: 74px;
+  position: static; }
   .other__header:after {
     content: "";
     display: table;
@@ -1347,9 +1348,6 @@ img {
     .other__header.introduce + .other__header__navigation--open {
       background-color: #ededed; } }
 
-html {
-  overflow: hidden; }
-
 .introduce-section__line {
   width: 30px;
   height: 1px;
@@ -2167,23 +2165,115 @@ html {
   margin: 0 15px;
   padding: 20px 0; }
 
-.often-question__search {
+.often-question .search-question__title {
+  display: none;
+  font-size: 1.625rem;
+  margin-bottom: 40px; }
+
+.often-question .search-question__search-box {
   display: block;
   padding: 20px;
   border-bottom: 1px solid #f0f0f0; }
 
-.often-question__search-icon {
-  display: inline-block;
-  width: 16px;
-  height: 17px;
-  background-image: url(../images/search-button.png);
-  margin-right: 10px; }
-
-.often-question__search-input {
+.often-question .search-question__input {
   font-size: 0.9275rem;
   outline: none; }
 
+.often-question .search-question__input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #c7c7c7; }
+
+.often-question .search-question__input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c7c7c7; }
+
+.often-question .search-question__input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #c7c7c7; }
+
+.often-question .search-question__input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #c7c7c7; }
+
+.often-question .search-question__icon {
+  display: inline-block;
+  width: 16px;
+  height: 17px;
+  background-image: url(../images/search-button_mobile.png);
+  margin-right: 10px; }
+
+.often-question__list--mobile {
+  display: block; }
+
+.often-question__list--mobile__item {
+  padding: 23px;
+  border-bottom: 1px solid #f0f0f0;
+  position: relative; }
+
+.often-question__link--mobile {
+  display: block;
+  width: 100%;
+  height: 100%; }
+
+.often-question--pc__container {
+  background-color: #FAFAFA;
+  padding: 40px 20px; }
+
+.often-question__list--pc {
+  display: block;
+  margin-bottom: 60px; }
+  .often-question__list--pc:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.often-question__list--pc__item {
+  width: 12.5%;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  margin-left: -1px;
+  padding: 25px 0;
+  position: relative;
+  float: left; }
+
+.often-question__list--pc__item:hover {
+  border: 1px solid #000;
+  z-index: 1; }
+
+.often-question__list--pc__item a {
+  color: #000; }
+
+.often-question__list--detail__title {
+  font-size: 0.9375rem;
+  margin-bottom: 20px; }
+
+.often-question__list--detail {
+  margin-bottom: 60px; }
+
+.often-question__list--detail__item {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: -1px;
+  padding: 25px 30px; }
+
+.often-question__list--detail__item a {
+  font-family: '돋움', dotum;
+  font-size: 0.75rem;
+  font-weight: bold; }
+
+.often-question .question-text {
+  font-size: 1rem; }
+
+.often-question__answer-arrow {
+  display: block;
+  width: 15px;
+  height: 9px;
+  background-image: url(../../images/answer-arrow.png);
+  margin-top: 7px;
+  float: right; }
+
 .often-question__footer {
+  display: block;
   font-size: 0.75rem;
   text-align: center;
   text-decoration: underline;
@@ -2197,73 +2287,46 @@ html {
   vertical-align: middle;
   margin-right: 8px; }
 
-.often-question__list__item {
-  padding: 23px;
-  border-bottom: 1px solid #f0f0f0;
-  position: relative; }
-
-.often-question__link {
-  display: block;
-  width: 100%;
-  height: 100%; }
-
-.search-question {
-  display: none;
-  text-align: center;
-  background-color: #ffe100;
-  padding: 70px 0; }
-  .search-question__title {
-    font-size: 1.625rem;
-    margin-bottom: 40px; }
-  .search-question__wrapper {
-    display: inline-block; }
-  .search-question__search-box {
-    width: 600px;
-    height: 60px;
-    background-color: #fff;
-    margin-bottom: 30px;
-    padding: 10px 10px 10px 50px;
-    position: relative; }
-    .search-question__search-box:after {
-      content: "";
-      display: table;
-      clear: both; }
-  .search-question__input {
-    font-family: '돋움', dotum;
-    display: block;
-    font-size: 0.875rem;
-    width: 100%;
-    height: 100%;
-    border: 0; }
-  .search-question__input::-webkit-input-placeholder {
-    /* Chrome/Opera/Safari */
-    color: #c7c7c7; }
-  .search-question__input::-moz-placeholder {
-    /* Firefox 19+ */
-    color: #c7c7c7; }
-  .search-question__input:-ms-input-placeholder {
-    /* IE 10+ */
-    color: #c7c7c7; }
-  .search-question__input:-moz-placeholder {
-    /* Firefox 18- */
-    color: #c7c7c7; }
-  .search-question__icon {
-    display: block;
-    width: 20px;
-    height: 19px;
-    background-image: url("../../images/search-button.png");
-    position: absolute;
-    top: 50%;
-    left: 20px;
-    transform: translateY(-50%); }
-
 @media (min-width: 1024px) {
   .often-question__header {
     display: none; }
-  .often-question__search {
+  .often-question .search-question {
+    display: block;
+    text-align: center;
+    background-color: #ffe100;
+    padding: 70px 0; }
+    .often-question .search-question__wrapper {
+      display: inline-block; }
+    .often-question .search-question__search-box {
+      width: 600px;
+      height: 60px;
+      background-color: #fff;
+      margin-bottom: 30px;
+      padding: 10px 10px 10px 50px;
+      position: relative; }
+    .often-question .search-question__title {
+      display: block; }
+    .often-question .search-question__input {
+      font-family: '돋움', dotum;
+      display: block;
+      font-size: 0.875rem;
+      width: 100%;
+      height: 100%; }
+    .often-question .search-question__icon {
+      display: block;
+      width: 20px;
+      height: 19px;
+      background-image: url("../../images/search-button.png");
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%); }
+  .often-question__list--mobile {
     display: none; }
-  .search-question {
-    display: block; } }
+  .often-question__list--pc {
+    display: block; }
+  .often-question__footer {
+    display: none; } }
 
 .question-detail .section__header {
   padding-top: 25px;
