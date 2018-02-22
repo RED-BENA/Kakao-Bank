@@ -2158,7 +2158,7 @@ img {
     .other__header.often-question .other__header__hamburger {
       border-left: 1px solid #e5c600; }
     .other__header.often-question + .other__header__navigation--open {
-      background-color: #e5c600; } }
+      background-color: #f2d300; } }
 
 .often-question__header {
   display: block;
@@ -2332,9 +2332,10 @@ img {
 @media (min-width: 1024px) {
   .often-question {
     width: 100%;
-    transition: transform .3s;
-    position: relative;
-    z-index: -1; }
+    transform: translateY(-150px);
+    transition: transform .3s; }
+    .often-question.open {
+      transform: translateY(0px); }
     .often-question__header {
       display: none; }
     .often-question .search-question {
@@ -2349,7 +2350,19 @@ img {
         background-color: #fff;
         margin-bottom: 30px;
         padding: 10px 10px 10px 50px;
-        position: relative; }
+        position: relative;
+        animation: sway 1s forwards; }
+  @keyframes sway {
+    0% {
+      transform: perspective(1000px) rotateX(-90deg); }
+    45% {
+      transform: perspective(1000px) rotateX(24deg); }
+    75% {
+      transform: perspective(1000px) rotateX(-10deg); }
+    90% {
+      transform: perspective(1000px) rotateX(5deg); }
+    100% {
+      transform: perspective(1000px) rotateX(0deg); } }
       .often-question .search-question__title {
         display: block; }
       .often-question .search-question__input {

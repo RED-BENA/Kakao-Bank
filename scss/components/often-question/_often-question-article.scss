@@ -200,13 +200,12 @@
 @include laptop {
   .often-question {
     width: 100%;
+    transform: translateY(-150px);
     transition: transform .3s;
-    position: relative;
-    z-index: -1;
 
-    // &.open {
-    //   transform: translateY(0px);
-    // }
+    &.open {
+      transform: translateY(0px);
+    }
 
     &__header {
       display: none;
@@ -228,6 +227,29 @@
         margin-bottom: 30px;
         padding: 10px 10px 10px 50px;
         position: relative;
+        animation: sway 1s forwards;
+      }
+
+      @keyframes sway {
+        0% {
+          transform: perspective(1000px) rotateX(-90deg);
+        }
+
+        45% {
+          transform: perspective(1000px) rotateX(24deg);
+        }
+
+        75% {
+          transform: perspective(1000px) rotateX(-10deg);
+        }
+
+        90% {
+          transform: perspective(1000px) rotateX(5deg);
+        }
+
+        100% {
+          transform: perspective(1000px) rotateX(0deg);
+        }
       }
 
       &__title {
