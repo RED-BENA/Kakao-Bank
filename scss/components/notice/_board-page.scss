@@ -1,7 +1,7 @@
-.notice--pc {
+.board-page {
   text-align: center;
   background-color: #FAFAFA;
-  padding: 50px 0 100px;
+  padding: 50px 20px 100px;
 
   &__title {
     font-size: 1.6875rem;
@@ -93,5 +93,9 @@
     background-image: url(../../images/search-button.png);
     margin-top: 30px;
     float: right;
+  }
+
+  @include laptop-l {
+    padding: 50px 0 100px;
   }
 }

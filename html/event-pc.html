@@ -9,13 +9,13 @@
   <link rel='stylesheet' href='https://cdn.jsdelivr.net/font-kopub/1.0/kopubdotum.css'>
   <link rel="stylesheet" href="../css/style.css" />
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
   <script src="../js/common.js"></script>
-  <script src="../js/often-question.js"></script>
-  <title>자주묻는질문 | 카카오뱅크</title>
+  <title>이벤트 | 카카오뱅크</title>
 </head>
 
 <body>
-  <header class="other__header often-question">
+  <header class="other__header notice">
     <div class="other__header__hamburger js-header__hamburger">
       <a href="#"></a>
     </div>
@@ -24,11 +24,11 @@
       <a href="../index.html">Kakaobank</a>
     </div>
 
-    <a class="other__header__link" href="notice.html">고객센터</a>
+    <a class="other__header__link" href="introduce.html">은행소개</a>
 
     <nav class="other__header__navigation">
       <ul class="other__header__navigation__menu">
-        <li class="active">
+        <li>
           <a href="#">카카오뱅크</a>
         </li>
 
@@ -44,8 +44,8 @@
           <a href="#">인재채용</a>
         </li>
 
-        <li>
-          <a href="#">새소식</a>
+        <li class="active">
+          <a href="notice-pc.html">새소식</a>
         </li>
       </ul>
     </nav>
@@ -54,23 +54,15 @@
   <div class="other__header__navigation--open">
     <ul class="other__header__navigation__sub-menu">
       <li class="active">
-        <a href="#">자주 묻는 질문</a>
+        <a href="notice-pc.html">공지사항</a>
       </li>
 
       <li>
-        <a href="#">이용시간 안내</a>
+        <a href="event-pc.html">이벤트</a>
       </li>
 
       <li>
-        <a href="#">ATM 이용안내</a>
-      </li>
-
-      <li>
-        <a href="#">금리안내</a>
-      </li>
-
-      <li>
-        <a href="#">수수료안내</a>
+        <a href="#">보도자료</a>
       </li>
     </ul>
   </div>
@@ -374,208 +366,148 @@
   <div class="dim-bg js-dim-bg"></div>
 
   <section>
-    <article class="often-question">
-      <p class="often-question__header">자주묻는질문</p>
+    <article class="board-page">
+      <div class="wrapper">
+        <h1 class="board-page__title">이벤트</h1>
 
-      <div class="search-question">
-        <div class="search-question__wrapper">
-          <h2 class="search-question__title">무엇을 도와드릴까요?</h2>
+        <table class="board-page__board">
+          <thead class="board-page__board__header">
+            <tr class="board-page__board__header__row">
+              <td class="board-page__board__header__item">No</td>
+              <td class="board-page__board__header__item">제목</td>
+              <td class="board-page__board__header__item">등록일</td>
+            </tr>
+          </thead>
 
-          <div class="search-question__search-box">
-            <span class="search-question__icon"></span>
-            <input class="search-question__input" type="text" placeholder="궁금하신 점이 있다면 검색 또는 도움말 카테고리를 선택하세요." />
-          </div>
-        </div>
+          <tbody class="board-page__board__content">
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">10</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">카카오뱅크 고객님께 드리는 신라면세점 특별 혜택</a>
+              </td>
+
+              <td class="board-page__board__content__item">2018.02.09</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">9</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">카카오뱅크 프렌즈 체크카드 캐시백 프로모션 시즌2</a>
+              </td>
+
+              <td class="board-page__board__content__item">2018.02.01</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">8</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">[종료] 카카오뱅크 ATM 출금 이벤트</a>
+              </td>
+
+              <td class="board-page__board__content__item">2018.01.29</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">7</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">[종료] 황금개의 해 기념 카카오뱅크 간편이체 이벤트</a>
+              </td>
+
+              <td class="board-page__board__content__item">2018.01.18</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">6</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">[당첨자발표] ATM 수수료 무료 연장 기념 신규 가입 고객 이모티콘 증정 이벤트</a>
+              </td>
+
+              <td class="board-page__board__content__item">2018.01.04</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">5</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">[종료] 카카오뱅크 체크카드 해외결제 이벤트</a>
+              </td>
+
+              <td class="board-page__board__content__item">2017.12.28</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">4</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">[종료] ATM 수수료 무료 연장 기념 신규 가입 고객 이모티콘 이벤트</a>
+              </td>
+
+              <td class="board-page__board__content__item">2017.12.14</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">3</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">[종료] 카카오뱅크 고객님께 드리는 신라면세점 특별 혜택</a>
+              </td>
+
+              <td class="board-page__board__content__item">2017.09.25</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">2</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">[종료] 카카오뱅크 프렌즈 체크카드 얼리버드 혜택</a>
+              </td>
+
+              <td class="board-page__board__content__item">2017.08.24</td>
+            </tr>
+
+            <tr class="board-page__board__content__row">
+              <td class="board-page__board__content__item">1</td>
+
+              <td class="board-page__board__content__item">
+                <a href="#">[종료] 카카오뱅크 런칭 기념 이모티콘 이벤트</a>
+              </td>
+
+              <td class="board-page__board__content__item">2017.08.24</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <ol class="board-page__page-number">
+          <li class="active">
+            <a href="#">1</a>
+          </li>
+
+          <li>
+            <a href="#">2</a>
+          </li>
+
+          <li>
+            <a href="#">3</a>
+          </li>
+
+          <li>
+            <a href="#">4</a>
+          </li>
+
+          <li>
+            <a href="#">5</a>
+          </li>
+        </ol>
+
+        <span class="board-page__search-icon"></span>
       </div>
-
-      <ul class="often-question__list--mobile">
-        <li class="often-question__list--mobile__item">
-          <a class="often-question__link--mobile--mobile" href="question-detail/savings.html">
-            <p class="item__title">예금/적금</p>
-            <span class="item__detail"></span>
-          </a>
-        </li>
-
-        <li class="often-question__list--mobile__item">
-          <a class="often-question__link--mobile" href="question-detail/loan.html">
-            <p class="item__title">대출</p>
-            <span class="item__detail"></span>
-          </a>
-        </li>
-
-        <li class="often-question__list--mobile__item">
-          <a class="often-question__link--mobile" href="question-detail/foreign-exchange.html">
-            <p class="item__title">외환</p>
-            <span class="item__detail"></span>
-          </a>
-        </li>
-
-        <li class="often-question__list--mobile__item">
-          <a class="often-question__link--mobile" href="#">
-            <p class="item__title">카드</p>
-            <span class="item__detail"></span>
-          </a>
-        </li>
-
-        <li class="often-question__list--mobile__item">
-          <a class="often-question__link--mobile" href="#">
-            <p class="item__title">ATM/CD</p>
-            <span class="item__detail"></span>
-          </a>
-        </li>
-
-        <li class="often-question__list--mobile__item">
-          <a class="often-question__link--mobile" href="#">
-            <p class="item__title">앱서비스</p>
-            <span class="item__detail"></span>
-          </a>
-        </li>
-
-        <li class="often-question__list--mobile__item">
-          <a class="often-question__link--mobile" href="#">
-            <p class="item__title">보안설정</p>
-            <span class="item__detail"></span>
-          </a>
-        </li>
-
-        <li class="often-question__list--mobile__item">
-          <a class="often-question__link--mobile" href="#">
-            <p class="item__title">기타</p>
-            <span class="item__detail"></span>
-          </a>
-        </li>
-      </ul>
-
-      <div class="often-question--pc__container">
-        <div class="wrapper">
-          <ul class="often-question__list--pc">
-            <li class="often-question__list--pc__item">
-              <a href="#">예금/적금</a>
-            </li>
-
-            <li class="often-question__list--pc__item">
-              <a href="#">대출</a>
-            </li>
-
-            <li class="often-question__list--pc__item">
-              <a href="#">외환</a>
-            </li>
-
-            <li class="often-question__list--pc__item">
-              <a href="#">카드</a>
-            </li>
-
-            <li class="often-question__list--pc__item">
-              <a href="#">ATM/CD</a>
-            </li>
-
-            <li class="often-question__list--pc__item">
-              <a href="#">앱서비스</a>
-            </li>
-
-            <li class="often-question__list--pc__item">
-              <a href="#">보안설정</a>
-            </li>
-
-            <li class="often-question__list--pc__item">
-              <a href="#">기타</a>
-            </li>
-          </ul>
-
-          <h3 class="often-question__list__title">자주묻는 질문 TOP</h3>
-
-          <ul class="often-question__list--detail">
-            <li class="often-question__list--detail__item">
-              <a href="#">
-                <span class="question-text">Q&nbsp;&nbsp;</span>[전월세보증금 대출] 전월세보증금 대출 신청은 어떻게 하나요?
-                <span class="often-question__answer-arrow"></span>
-              </a>
-            </li>
-
-            <li class="often-question__list--detail__item">
-              <a href="#">
-                <span class="question-text">Q&nbsp;&nbsp;</span>세이프박스에 대해 알려주세요.
-                <span class="often-question__answer-arrow"></span>
-              </a>
-            </li>
-
-            <li class="often-question__list--detail__item">
-              <a href="#">
-                <span class="question-text">Q&nbsp;&nbsp;</span>카카오뱅크 계좌가 없는 카카오톡 친구에게도 이체할 수 있나요?
-                <span class="often-question__answer-arrow"></span>
-              </a>
-            </li>
-
-            <li class="often-question__list--detail__item">
-              <a href="#">
-                <span class="question-text">Q&nbsp;&nbsp;</span>앱을 다시 설치했는데 내 계좌정보가 보이지 않습니다.
-                <span class="often-question__answer-arrow"></span>
-              </a>
-            </li>
-
-            <li class="often-question__list--detail__item">
-              <a href="#">
-                <span class="question-text">Q&nbsp;&nbsp;</span>인터넷전문은행인데 현금출금이 가능한가요?
-                <span class="often-question__answer-arrow"></span>
-              </a>
-            </li>
-
-            <li class="often-question__list--detail__item">
-              <a href="#">
-                <span class="question-text">Q&nbsp;&nbsp;</span>비상금대출 신청은 어떻게 하나요?
-                <span class="often-question__answer-arrow"></span>
-              </a>
-            </li>
-
-            <li class="often-question__list--detail__item">
-              <a href="#">
-                <span class="question-text">Q&nbsp;&nbsp;</span>만기가 되지않은 예적금의 일부 금액을 출금할 수 있나요?
-                <span class="often-question__answer-arrow"></span>
-              </a>
-            </li>
-          </ul>
-
-          <h3 class="often-question__list__title">전화 상담 안내</h3>
-
-          <ul class="often-question__call-list">
-            <li class="often-question__call-list__item">
-              <p class="often-question__call-list__title">각종 사고신고</p>
-
-              <p class="often-question__call-list__phone-number">
-                1599 - 8888
-              </p>
-
-              <p class="often-question__call-list__phone-number--global">해외&nbsp;&nbsp;+82-2-6420-3333</p>
-
-              <p class="often-question__call-list__time">24시간 365일</p>
-            </li>
-
-            <li class="often-question__call-list__seperate"></li>
-
-            <li class="often-question__call-list__item">
-              <p class="often-question__call-list__title">고객센터</p>
-
-              <p class="often-question__call-list__phone-number">
-                1599 - 3333
-              </p>
-
-              <p class="often-question__call-list__phone-number--global">해외&nbsp;&nbsp;+82-2-6420-3333</p>
-
-              <p class="often-question__call-list__time">평일 09:00 - 22:00</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <a class="top-button js-top-button" href="#"></a>
     </article>
   </section>
-
-  <footer class="often-question__footer">
-    <p>
-      <span class="often-question__footer__call-icon"></span>고객센터 (1599-3333)
-    </p>
-  </footer>
 
   <footer class="footer">
     <div class="wrapper">
