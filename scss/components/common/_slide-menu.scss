@@ -95,7 +95,13 @@
 }
 
 .slide-menu--mobile {
-  display: block;
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
 
   &__header {
     padding: 15px 20px;

@@ -80,3 +80,49 @@
     }
   }
 }
+
+.other__header.introduce,
+.other__header.notice {
+  .other__header {
+    &__link {
+      color: #fff;
+    }
+
+    &__navigation__menu li.active {
+      border-bottom: 3px solid #fff;
+    }
+  }
+}
+
+@include laptop {
+  .other__header.introduce,
+  .other__header.notice {
+    background-color: #313955;
+    height: 80px;
+
+    .other__header {
+      &__hamburger {
+        border-left: 1px solid #464d66;
+      }
+
+      &__hamburger a {
+        background-image: url("../images/hamburger_menu_white.png");
+      }
+
+      &__logo a {
+        background-image: url("../images/logo_white.png");
+      }
+    }
+
+    & + .other__header__navigation--open {
+      background-color: #ededed;
+      @include clearfix;
+
+      .other__header__navigation__sub-menu {
+        width: 300px;
+        margin: 0;
+        float: right;
+      }
+    }
+  }
+}
