@@ -7,6 +7,16 @@ $(document).ready(function() {
     //data-offset-left의 value 만큼 (0%, -10%, -20%, -30%)
   }
 
+  $(window).resize(function() {
+    if ($(window).width() < 1024) {
+      $('.js-timeline__year').css("margin-left", "-110%");
+      //data-offset-left의 value 만큼 (10%, -30%, -70%, -110%)
+    } else {
+      $('.js-timeline__year').css("margin-left", "0%");
+      //data-offset-left의 value 만큼 (0%, -10%, -20%, -30%)
+    }
+  });
+
   $('.js-timeline__year__item').click(function() {
     if ($(window).width() < 1024) {
       $('.js-timeline__year').css("margin-left", $(this).attr("offset-left"));

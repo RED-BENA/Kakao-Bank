@@ -70,6 +70,7 @@
   }
 
   &--pc__container {
+    display: none;
     background-color: #FAFAFA;
     padding: 40px 20px;
   }
@@ -300,6 +301,10 @@
         left: 20px;
         transform: translateY(-50%);
       }
+    }
+
+    &--pc__container {
+      display: block;
     }
 
     &__list--mobile {
