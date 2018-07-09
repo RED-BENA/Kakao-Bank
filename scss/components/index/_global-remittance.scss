@@ -73,7 +73,7 @@
   }
 
   @include laptop {
-    background-image: url(../../images/home_map.png);
+    background-image: url(../images/home_map.png);
     background-position: right center;
 
     &__content {

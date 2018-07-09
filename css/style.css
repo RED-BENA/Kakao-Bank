@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: 'Yoon 윤고딕';
-  src: url(../../fonts/YoonGothicPro720.woff); }
+  src: url(../fonts/YoonGothicPro720.woff); }
 
 html {
   position: relative;
@@ -436,17 +436,17 @@ img {
     float: left; }
     .footer__sns-list__item.facebook {
       width: 10px;
-      background-image: url(../../images/facebook-icon.png); }
+      background-image: url(../images/facebook-icon.png); }
     .footer__sns-list__item.blog {
       width: 12px;
-      background-image: url(../../images/blog-icon.png); }
+      background-image: url(../images/blog-icon.png); }
     .footer__sns-list__item.post {
       width: 12px;
-      background-image: url(../../images/post-icon.png); }
+      background-image: url(../images/post-icon.png); }
     .footer__sns-list__item.youtube {
       width: 23px;
       height: 16px;
-      background-image: url(../../images/youtube-icon.png); }
+      background-image: url(../images/youtube-icon.png); }
     .footer__sns-list__item a {
       display: block;
       width: 100%;
@@ -583,9 +583,9 @@ img {
       height: 17px;
       background-size: cover; }
     .banner__download--playstore .banner__download__icon {
-      background-image: url("../../images/playstore_mobile.png"); }
+      background-image: url("../images/playstore_mobile.png"); }
     .banner__download--appstore .banner__download__icon {
-      background-image: url("../../images/appstore_mobile.png"); }
+      background-image: url("../images/appstore_mobile.png"); }
   .banner__submit-papers {
     display: none;
     background-color: #ffde00;
@@ -611,7 +611,7 @@ img {
     .banner__submit-papers .right-arrow {
       width: 10px;
       height: 17px;
-      background-image: url(../../images/submit_right-arrow.png);
+      background-image: url(../images/submit_right-arrow.png);
       background-size: cover;
       margin-left: 35px; }
   @media (min-width: 1024px) {
@@ -637,9 +637,9 @@ img {
           width: 26px;
           height: 27px; }
         .banner__download--playstore .banner__download__icon {
-          background-image: url("../../images/playstore.png"); }
+          background-image: url("../images/playstore.png"); }
         .banner__download--appstore .banner__download__icon {
-          background-image: url("../../images/appstore.png"); }
+          background-image: url("../images/appstore.png"); }
       .banner__submit-papers {
         display: block; } }
 
@@ -815,7 +815,7 @@ img {
       margin-left: 10px; }
   @media (min-width: 1024px) {
     .global-remittance {
-      background-image: url(../../images/home_map.png);
+      background-image: url(../images/home_map.png);
       background-position: right center; }
       .global-remittance__content {
         position: absolute;
@@ -1194,7 +1194,7 @@ img {
     display: none;
     width: 38px;
     height: 72px;
-    background-image: url(../../images/img-left.png);
+    background-image: url(../images/img-left.png);
     position: absolute;
     top: 450px;
     left: 0;
@@ -1204,7 +1204,7 @@ img {
     display: none;
     width: 38px;
     height: 72px;
-    background-image: url(../../images/img-right.png);
+    background-image: url(../images/img-right.png);
     position: absolute;
     top: 450px;
     right: 0;
@@ -1821,7 +1821,7 @@ img {
         display: block;
         width: 35px;
         height: 45px;
-        background-image: url(../../images/play-mobile-s.png);
+        background-image: url(../images/play-mobile-s.png);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -1887,7 +1887,7 @@ img {
           display: block;
           width: 75px;
           height: 84px;
-          background-image: url(../../images/play.png); }
+          background-image: url(../images/play.png); }
       .introduce-movies .slide-show__item__title {
         font-size: 1.3125rem;
         margin-bottom: 20px; }
@@ -1939,12 +1939,12 @@ img {
   .introduce-bi__image--symbol {
     width: 147px;
     height: 147px;
-    background-image: url(../../images/symbol_mobile-s.png);
+    background-image: url(../images/symbol_mobile-s.png);
     margin: 0 auto 10px; }
   .introduce-bi__image--wordmark {
     width: 225px;
     height: 100px;
-    background-image: url(../../images/wordmark_mobile-s.png);
+    background-image: url(../images/wordmark_mobile-s.png);
     margin: 90px auto 10px; }
   .introduce-bi__name {
     font-size: 1rem;
@@ -1982,12 +1982,12 @@ img {
     .introduce-bi__image--symbol {
       width: 290px;
       height: 290px;
-      background-image: url(../../images/symbol.png);
+      background-image: url(../images/symbol.png);
       margin-bottom: 40px; }
     .introduce-bi__image--wordmark {
       width: 450px;
       height: 199px;
-      background-image: url(../../images/wordmark.png);
+      background-image: url(../images/wordmark.png);
       margin-bottom: 40px; }
     .introduce-bi__name {
       font-size: 1.375rem;

@@ -41,11 +41,11 @@
     }
 
     &--playstore &__icon {
-        background-image: url("../../images/playstore_mobile.png");
+        background-image: url("../images/playstore_mobile.png");
     }
 
     &--appstore &__icon {
-        background-image: url("../../images/appstore_mobile.png");
+        background-image: url("../images/appstore_mobile.png");
     }
   }
 
@@ -83,7 +83,7 @@
     .right-arrow {
       width: 10px;
       height: 17px;
-      background-image: url(../../images/submit_right-arrow.png);
+      background-image: url(../images/submit_right-arrow.png);
       background-size: cover;
       margin-left: 35px;
     }
@@ -119,11 +119,11 @@
       }
 
       &--playstore &__icon {
-        background-image: url("../../images/playstore.png");
+        background-image: url("../images/playstore.png");
       }
 
       &--appstore &__icon {
-          background-image: url("../../images/appstore.png");
+          background-image: url("../images/appstore.png");
       }
     }
 
